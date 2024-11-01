@@ -60,14 +60,14 @@ function App() {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <div className="relative w-[420px] h-[90px] text-center flex flex-col items-center">
+          <div className="relative w-[420px] h-[90px] text-center flex flex-col items-center mt-[50px]">
             <div className="absolute z-10 right-0 top-[-20px]" ><Ticket rotate={0} isSmall={true}/></div>
             <div className="absolute z-10 left-0 bottom-0" ><Ticket rotate={45} isSmall={true}/></div>
             <button className="absolute z-20 gradient-button rounded-lg px-[50px] py-3 ring-2 ring-offset-4 ring-offset-black ring-[#720000] font-['Graduate'] text-[30px]">Get Tickets Win Prizes</button>
           </div>
-          <div className="max-w-[1829px] my-[50px] w-[90%] mx-[50px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]">
-            <div className="w-full border-2 border-solid border-gray-500 rounded-[20px] uppercase leading-normal tracking-widest text-[30px] px-[10px] py-[50px] relative">
-              <div className="flex flex-row justify-center items-center gap-5">
+          <div className="max-w-[1829px] my-[100px] w-[90%] mx-[50px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]">
+            <div className="w-full border-2 border-solid border-gray-500 rounded-[20px] uppercase leading-normal tracking-widest text-[30px] px-[10px] pt-[50px] pb-[10px] relative">
+              <div className="flex flex-row justify-around items-center gap-5">
               {
                 onChainData.map(item => {
                   return (
@@ -96,7 +96,7 @@ function App() {
 
         <div className="flex flex-col items-center gap-5 mt-[100px]">
           <div className="text-[40px]">How to start play?</div>
-          <div className="flex flex-row items-center justify-center">
+          <div className="flex flex-row items-start justify-around">
             {
               playMethodData.map((item, index) => {
                 return (
