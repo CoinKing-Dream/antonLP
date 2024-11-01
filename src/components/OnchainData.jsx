@@ -1,8 +1,8 @@
 
 const Onchaindata = ({value, name}) => {
     return (
-        <div>
-            <div>{value}</div>
+        <div className="flex flex-col justify-center items-center gap-5">
+            <div className="text-[#EC7480]">{value}</div>
             <div>{name}</div>
         </div>
     )

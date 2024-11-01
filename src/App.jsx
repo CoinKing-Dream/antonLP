@@ -51,7 +51,7 @@ function App() {
             <div
               className="max-w-[1468px] rounded-[20px] my-[50px] mx-[50px] text-center bg-[#D9D9D920] p-[8px]"
             >
-              <div className="w-full border-2 border-solid border-gray-500 rounded-[20px] uppercase font-['Graduate'] leading-normal tracking-widest text-[30px] px-[10px]">
+              <div className="w-full border-2 border-solid border-gray-500 rounded-[20px] uppercase leading-normal tracking-widest text-[30px] px-[10px]">
                 TonTickets is a telegram mini-app in where people can win many
                 different prizes ranging from popular memecoins to the rarest and
                 most expensive NFT on TON chain
@@ -61,23 +61,41 @@ function App() {
         </div>
         <div className="flex flex-col items-center">
           <div className="relative w-[420px] h-[90px] text-center flex flex-col items-center">
-            <div className="absolute z-10 right-0 top-[-20px]" ><Ticket rotate={0} width={40}/></div>
-            <div className="absolute z-10 left-0 bottom-0" ><Ticket rotate={45} width={40}/></div>
+            <div className="absolute z-10 right-0 top-[-20px]" ><Ticket rotate={0} isSmall={true}/></div>
+            <div className="absolute z-10 left-0 bottom-0" ><Ticket rotate={45} isSmall={true}/></div>
             <button className="absolute z-20 gradient-button rounded-lg px-[50px] py-3 ring-2 ring-offset-4 ring-offset-black ring-[#720000] font-['Graduate'] text-[30px]">Get Tickets Win Prizes</button>
           </div>
-          <div className="flex flex-row justify-center items-center gap-5">
-            {
-              onChainData.map(item => {
-                return (
-                  <OnChainData name={item.name} value={item.value}/>
-                )
-              })
-            }
+          <div className="max-w-[1829px] my-[50px] w-[90%] mx-[50px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]">
+            <div className="w-full border-2 border-solid border-gray-500 rounded-[20px] uppercase leading-normal tracking-widest text-[30px] px-[10px] py-[50px] relative">
+              <div className="flex flex-row justify-center items-center gap-5">
+              {
+                onChainData.map(item => {
+                  return (
+                    <OnChainData name={item.name} value={item.value}/>
+                  )
+                })
+              }
+              </div>
+              <div className="absolute z-10 left-[20px] top-0" ><Ticket rotate={327} isSmall={false}/></div>
+              <div className="absolute z-10 left-[20%] top-0" ><Ticket rotate={193} isSmall={true}/></div>
+              <div className="absolute z-10 left-[40%] top-0" ><Ticket rotate={20.92} isSmall={true}/></div>
+              <div className="absolute z-10 left-[60%] top-0" ><Ticket rotate={347} isSmall={true}/></div>
+              <div className="absolute z-10 left-[80%] top-0" ><Ticket rotate={354} isSmall={false}/></div>
+              <div className="absolute z-10 right-[10px] top-0" ><Ticket rotate={170.18} isSmall={true}/></div>
+
+              <div className="absolute z-10 left-[35%] top-[45%]" ><Ticket rotate={343} isSmall={false}/></div>
+              <div className="absolute z-10 left-[70%] top-[45%]" ><Ticket rotate={26.97} isSmall={true}/></div>
+
+              <div className="absolute z-10 left-[20%] bottom-0" ><Ticket rotate={20.55} isSmall={false}/></div>
+              <div className="absolute z-10 left-[40%] bottom-0" ><Ticket rotate={216} isSmall={true}/></div>
+              <div className="absolute z-10 left-[60%] bottom-0" ><Ticket rotate={250.62} isSmall={false}/></div>
+              <div className="absolute z-10 left-[80%] bottom-0" ><Ticket rotate={8.22} isSmall={false}/></div>
+            </div>
           </div>
         </div>
 
-        <div>
-          <p>How to start play?</p>
+        <div className="flex flex-col items-center gap-5 mt-[100px]">
+          <div className="text-[40px]">How to start play?</div>
           <div className="flex flex-row items-center justify-center">
             {
               playMethodData.map((item, index) => {

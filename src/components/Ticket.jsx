@@ -1,10 +1,10 @@
 import ticket from "../assets/ticket.gif";
 
-const Ticket = ({rotate, width}) => {
+const Ticket = ({rotate, isSmall}) => {
     return (
-        <>
-            <img src={ticket} alt="ticket" className={"rotate-["+rotate+"deg]"} width={width}/>
-        </>
+        <div style={{transform: `rotate(${rotate}deg)`}}>
+            <img src={ticket} alt="ticket" width={isSmall ? 40 : 50}/>
+        </div>
     )
 }
 

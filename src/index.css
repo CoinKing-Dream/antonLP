@@ -11,10 +11,11 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #000000;
 
-  font-synthesis: none;
+  font-family: Graduate !important;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 .radial-gradient-1 {
