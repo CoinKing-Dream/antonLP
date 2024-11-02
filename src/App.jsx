@@ -157,7 +157,7 @@ function App() {
             <p>DEMO</p>
             <Demo />
           </div>
-          <div className="flex flex-col items-center gap-[50px]">
+          <div className="flex flex-col items-center gap-[50px] overflow-hidden">
             <p>ROADMAP</p>
             <Roadmap />
           </div>
