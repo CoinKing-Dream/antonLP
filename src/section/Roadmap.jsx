@@ -46,11 +46,11 @@ const Roadmap = () => {
                 return (
                     <>
                         <div className="flex flex-row gap-[20px] justify-center items-center">
-                            <div className={`text-[25px] w-[300px] h-[80px] flex justify-center items-center px-0 rounded-[20px] ${item.now>index?"bg-[#8A5300E5]":"bg-[#4040404D]"}`}>{item.date}</div>
-                            <div className={`relative flex flex-col gap-5 justify-center items-center w-[300px] h-[171px] overflow-hidden bg-[#4040404D] p-[10px] rounded-[20px]`}>
+                            <div className={`md:text-[25px] sm:text-[20px] text-[10px] md:w-[300px] sm:w-[200px] w-[100px] h-[80px] flex justify-center items-center px-0 rounded-[20px] ${item.now>index?"bg-[#8A5300E5]":"bg-[#4040404D]"}`}>{item.date}</div>
+                            <div className={`relative flex flex-col gap-5 justify-center items-center w-[200px] sm:w-[300px] h-[171px] overflow-hidden bg-[#4040404D] p-[10px] rounded-[20px]`}>
                                 <div className={`${index==4&&"blur-md"} text-[${item.now<=index?25:20}px] text-center`}>{item.title}</div>
-                                <img className="absolute top-[1px] right-[1px]" src={item.icon}/>
-                                <div className={`${index==4&&"blur-sm"} text-[15px] text-center`}>{item.content}</div>
+                                <img className="absolute top-[25px] right-[1px] sm:top-[1px] sm:right-[1px] w-[20px] sm:w-[50px]" src={item.icon}/>
+                                <div className={`${index==4&&"blur-sm"} text-[10px] sm:text-[15px] text-center`}>{item.content}</div>
                             </div>
                             
                         </div>

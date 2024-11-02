@@ -2,15 +2,15 @@ import Ticket from "./Ticket";
 
 const PlayMethod = ({order, title, content}) => {
     const ticketComponents = Array.from({length: order}, (_, index) => 
-        <div key={index} className="absolute w-[120px] h-[120px] left-0 top-0" style={{transform: `translate(15%, 15%) rotate(${180-((index==1)?90:(360/order))*index}deg)`}}>
+        <div key={index} className="z-100 absolute w-[120px] h-[120px] left-0 top-0" style={{transform: `translate(15%, 15%) rotate(${180-((index==1)?90:(360/order))*index}deg)`}}>
           <Ticket rotate={347} isSmall={false}/>
         </div>
       );
 
     return (
-        <div className="flex flex-col items-center w-[20%] min-w-[300px] gap-5">
+        <div className="z-[100] flex flex-col items-center w-[400px] gap-5">
             <div>
-                <div className="w-[150px] h-[150px] rounded-full bg-[#40404080] relative">
+                <div className="z-100 w-[150px] h-[150px] rounded-full bg-[#40404080] relative">
                 {
                     ticketComponents
                 }    

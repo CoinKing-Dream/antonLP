@@ -29,7 +29,6 @@
 .radial-gradient-1 {
   background-image: radial-gradient(#000000 44%, #1A1A1A 57%, #000004 76%);
   width: 100vw;
-  height: 450px;
   /* rotate: 30deg; */
   /* z-index: -1000 !important; */
   background-color: white !important;
