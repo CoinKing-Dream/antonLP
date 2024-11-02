@@ -4,7 +4,7 @@ const devs = ["01011001", "01101111", "01110101", "01110010", "00100000", "01100
 
 const ForDevs = () => {
     return (
-        <div className="flex flex-row flex-wrap justify-center gap-[30px] w-[90%] max-w-[1663px]">
+        <div className="flex flex-row flex-wrap justify-center gap-[20px] max-w-[1663px]">
         {
             devs.map(item => {
                 return(

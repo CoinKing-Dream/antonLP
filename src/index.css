@@ -22,6 +22,10 @@
   height: 800px;
 }
 
+.campPanel {
+  background-image: linear-gradient(180deg, rgba(249, 241, 181, 0.9) 62%, rgba(138, 83, 0, 0.9) 96%);
+}
+
 .radial-gradient-1 {
   background-image: radial-gradient(#000000 44%, #1A1A1A 57%, #000004 76%);
   width: 100vw;
