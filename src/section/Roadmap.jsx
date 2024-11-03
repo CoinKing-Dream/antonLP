@@ -4,6 +4,34 @@ import partnershipIcon from "../assets/3_partnership.png";
 import memecoinIcon from "../assets/4_memecoin.png";
 import chainsIcon from "../assets/5_chains.png";
 
+import { useState, useEffect } from 'react';
+
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize(); // Call it initially
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // Empty dependency array means this effect runs once on mount and unmount
+
+  if (windowSize.width >= 768) return 160;
+  else if (windowSize.width >= 640) return 120;
+  else return 65;
+}
+
 const roadMap = [{
     date: "OCTOBER 2024",
     title: "Development",
@@ -39,6 +67,8 @@ const roadMap = [{
 import campImg from "../assets/camp.png";
 
 const Roadmap = () => {
+    const leftMoveValue = useWindowSize();
+
     return (
         <div className="flex flex-col gap-[30px] bg-[#4040404D] px-[20px] py-[10px] rounded-[20px] relative h-[942px]">
         {
@@ -54,7 +84,8 @@ const Roadmap = () => {
                             </div>
                             
                         </div>
-                        <div className={`flex flex-col absolute`} style={{top: `${index?200*index-65:200*index}px`, left: `${index?160:140}px`}}>
+                        <div className={`flex flex-col absolute`} 
+                            style={{top: `${index?200*index-65:200*index}px`, left: `${index?leftMoveValue:leftMoveValue-20}px`}}>
                         {
                             !index?
                                 <div className="relative">
