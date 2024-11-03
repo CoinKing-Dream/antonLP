@@ -27,8 +27,8 @@ function useWindowSize() {
     return () => window.removeEventListener('resize', handleResize);
   }, []); // Empty dependency array means this effect runs once on mount and unmount
 
-  if (windowSize.width >= 768) return 160;
-  else if (windowSize.width >= 640) return 120;
+  if (windowSize.width >= 1280) return 160;
+  else if (windowSize.width >= 640) return 90;
   else return 65;
 }
 
@@ -70,19 +70,18 @@ const Roadmap = () => {
     const leftMoveValue = useWindowSize();
 
     return (
-        <div className="flex flex-col gap-[30px] bg-[#4040404D] px-[20px] py-[10px] rounded-[20px] relative h-[942px]">
+        <div className="flex flex-col gap-[30px] bg-[#4040404D] px-[10px] lg:px-[20px] py-[10px] rounded-[20px] relative h-[942px]">
         {
             roadMap.map((item, index) => {
                 return (
                     <>
                         <div className="flex flex-row gap-[20px] justify-center items-center">
-                            <div className={`md:text-[25px] sm:text-[20px] text-[10px] md:w-[300px] sm:w-[200px] w-[100px] h-[80px] flex justify-center items-center px-0 rounded-[20px] ${item.now>index?"bg-[#8A5300E5]":"bg-[#4040404D]"}`}>{item.date}</div>
+                            <div className={`xl:text-[25px] sm:text-[15px] text-[10px] xl:w-[280px] sm:w-[150px] w-[100px] h-[80px] flex justify-center items-center px-0 rounded-[20px] ${item.now>index?"bg-[#8A5300E5]":"bg-[#4040404D]"}`}>{item.date}</div>
                             <div className={`relative flex flex-col gap-5 justify-center items-center w-[200px] sm:w-[300px] h-[171px] overflow-hidden bg-[#4040404D] p-[10px] rounded-[20px]`}>
                                 <div className={`${index==4&&"blur-md"} text-[${item.now<=index?25:20}px] text-center`}>{item.title}</div>
-                                <img className="absolute top-[25px] right-[1px] sm:top-[1px] sm:right-[1px] w-[20px] sm:w-[50px]" src={item.icon}/>
                                 <div className={`${index==4&&"blur-sm"} text-[10px] sm:text-[15px] text-center`}>{item.content}</div>
+                                <img className="absolute top-[25px] right-[1px] sm:top-[1px] sm:right-[1px] w-[20px] sm:w-[50px]" src={item.icon}/>
                             </div>
-                            
                         </div>
                         <div className={`flex flex-col absolute`} 
                             style={{top: `${index?200*index-65:200*index}px`, left: `${index?leftMoveValue:leftMoveValue-20}px`}}>

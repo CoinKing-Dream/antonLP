@@ -83,11 +83,11 @@ function App() {
               <div className="absolute z-10 left-[-5px] top-[20px] sm:top-[50px] md:top-[60px] lg:top-[85px]">
                 <Ticket rotate={45} isSmall={true} />
               </div>
-              <button className="absolute z-20 gradient-button rounded-[15px] px-[60px] py-[10px] sm:py-[20px] md:py-[20px] lg:py-[30px] ring-2 ring-offset-4 ring-offset-black ring-[#720000] font-['Graduate'] text-[15px] md:text-[20px] lg:text-[30px]">
+              <button href="#" className="absolute z-20 gradient-button rounded-[15px] px-[60px] py-[10px] sm:py-[20px] md:py-[20px] lg:py-[30px] ring-2 ring-offset-4 ring-offset-black ring-[#720000] font-['Graduate'] text-[15px] md:text-[20px] lg:text-[30px]">
                 Get Tickets Win Prizes
               </button>
             </div>
-            <div className="max-w-[1850px] my-[20px] sm:my-[60px] md:my-[100px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]">
+            <div className="max-w-[1850px] w-[90%] my-[20px] sm:my-[60px] md:my-[100px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]">
               <div className="w-full border-2 border-solid border-gray-500 rounded-[20px] uppercase leading-normal tracking-widest text-[15px] md:text-[20px] lg:text-[30px] px-[10px] pt-[50px] pb-[10px] relative">
                 <div className="absolute z-[-100] left-[20px] top-0">
                   <Ticket rotate={327} isSmall={false} />
@@ -136,10 +136,10 @@ function App() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center items-center gap-[100px] z-[100]">
-            <div className="z-[100] text-[30px] sm:text-[35px] md:text-[40px] mt-[30px] sm:mt-[50px] md:mt-[60px] lg:mt-[100px]">How to start play?</div>
-            <div className="flex flex-row items-start justify-around gap-[50px] relative overflow-scroll ">
-              <div className="h-[1px] bg-[#404040] z-[-1] w-[1300px] absolute top-[75px]"></div>
+          <div className="flex flex-col justify-center items-center gap-[50px] md:gap-[100px] z-[100] w-full">
+            <div className="z-[100] text-[20px] sm:text-[30px] md:text-[40px] mt-[30px] sm:mt-[50px] md:mt-[60px] lg:mt-[100px]">How to start play?</div>
+            <div className="flex sm:flex-row flex-col items-center justify-center sm:items-start sm:justify-around  gap-5 sm:gap-[50px] relative w-[90%]">
+              <div className="sm:h-[1px] sm:w-[80%] h-[400px] left-[40px] w-[1px] sm:left-[50px] md:left-[100px] lg:left-[150px] bg-[#404040] z-[-1000] absolute sm:top-[40px] md:top-[50px] lg:top-[49px] xl:top-[80px]"></div>
               {playMethodData.map((item, index) => {
                 return (
                   <PlayMethod
@@ -153,12 +153,12 @@ function App() {
           </div>
         </div>
 
-        <div className="radial-gradient-2 my-[1px] sm:my-[50px] md:my-[100px] flex 2xl:flex-row 2xl:justify-around flex-col gap-5 w-full max-w-[1500px]">
-          <div className="flex flex-col items-center gap-[50px]">
+        <div className="radial-gradient-2 my-[50px] sm:my-[60px] md:my-[100px] flex lg:flex-row lg:justify-around flex-col gap-5 w-full max-w-[1500px]">
+          <div className="flex flex-col items-center gap-[20px] sm:gap-[50px]">
             <p className="text-[20px] sm:text-[30px] md:text-[50px]">DEMO</p>
             <Demo />
           </div>
-          <div className="flex flex-col items-center gap-[50px] overflow-hidden">
+          <div className="flex flex-col items-center gap-[20px] sm:gap-[50px] overflow-hidden">
             <p className="text-[20px] sm:text-[30px] md:text-[50px]">ROADMAP</p>
             <Roadmap />
           </div>
