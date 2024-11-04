@@ -12,6 +12,8 @@ import ForDevs from "./section/ForDevs";
 import Partners from "./section/Partners";
 import Ticket from "./components/Ticket";
 
+import { useState, useEffect } from "react";
+
 const onChainData = [
   {
     value: "210.298",
@@ -56,14 +58,29 @@ const playMethodData = [
 ];
 
 function App() {
+  const [isScrollDown, SetIsScrollDown] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      SetIsScrollDown(window.scrollY > 50 ? true : false);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <div className="w-full flex flex-col items-center justify-center">
+      <div className="w-full flex flex-col items-center justify-center relative">
         <div className="radial-gradient-1 w-full z-[-105]">
+          <div className={`w-full flex justify-center items-center h-[100px] sm:h-[150px] md:h-[170px] lg:h-[200px] fixed z-[100000] ${isScrollDown?"bg-gray-900":"bg-transparent"}`}>
+            <img src={logo} alt="logo" className="w-[50px] lg:w-[125px] md:w-[90px] sm:w-[80px] h-[50px] sm:h-[80px] md:h-[100px] lg:h-[130px]"/>
+          </div>
           <div className="divide-y">
-            <div className="w-full flex justify-center my-[20px] sm:my-[50px]">
-              <img src={logo} alt="logo" className="w-[50px] lg:w-[125px] md:w-[90px] sm:w-[80px]"/>
-            </div>
+            <div className={`w-full h-[100px] sm:h-[150px] md:h-[170px] lg:h-[200px]`}></div>
             <div className="flex justify-center">
               <div className="max-w-[1500px] w-[90%] rounded-[20px] my-[10px] sm:my-[20px] md:my-[30px] lg:my-[80px] mx-[20px] text-center bg-[#D9D9D920] p-[10px]">
                 <div className="w-full border-2 border-solid border-gray-500 rounded-[10px] sm:rounded-[20px] uppercase leading-normal tracking-widest text-[10px] sm:text-[15px] md:text-[15px] lg:text-[20px] xl:text-[25px] px-[30px]">
@@ -75,7 +92,7 @@ function App() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center w-full gap-[100px] my-[20px] sm:my-[50px] md:my-[80px]">
+          <div className="flex flex-col items-center justify-center w-full gap-[100px] my-[30px] sm:my-[50px] md:my-[80px]">
             <div className="relative w-[300px] md:w-[400px] lg:w-[520px] text-center flex flex-col items-center mb-[2px] lg:mb-[50px]">
               <div className="absolute z-10 right-[-5px] top-[-20px]">
                 <Ticket rotate={0} isSmall={true} />
@@ -83,9 +100,9 @@ function App() {
               <div className="absolute z-10 left-[-5px] top-[20px] sm:top-[50px] md:top-[55px] lg:top-[85px]">
                 <Ticket rotate={45} isSmall={true} />
               </div>
-              <div href="#" className="absolute z-20 gradient-button rounded-[5px] sm:rounded-[15px] px-[40px] sm:px-[45px] md:px-[65px] lg:px-[85px] xl:px-[60px] py-[10px] sm:py-[25px] md:py-[20px] lg:py-[30px] ring-2 ring-offset-4 ring-offset-black ring-[#720000] text-[15px] md:text-[20px] lg:text-[25px] xl:text-[30px]">
+              <button className="cursor-pointer absolute z-20 gradient-button rounded-[5px] sm:rounded-[15px] px-[40px] sm:px-[45px] md:px-[65px] lg:px-[85px] xl:px-[60px] py-[10px] sm:py-[25px] md:py-[20px] lg:py-[30px] ring-2 ring-offset-4 ring-offset-black ring-[#720000] text-[15px] md:text-[20px] lg:text-[25px] xl:text-[30px]">
                 Get Tickets Win Prizes
-              </div>
+              </button>
             </div>
             <div className="max-w-[1850px] w-[200px] sm:w-[600px] lg:w-[90%] my-[20px] sm:my-[60px] md:my-[100px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]">
               <div className="w-full border-2 border-solid border-gray-500 rounded-[10px] sm:rounded-[20px] uppercase leading-normal tracking-widest text-[13px] sm:text-[15px] lg:text-[15px] xl:text-[20px] 2xl:text-[25px] px-[10px] pt-[50px] pb-[10px] relative">

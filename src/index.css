@@ -49,4 +49,19 @@
   background: linear-gradient(93.64deg, #FF5E6C 41.98%, #993841 100%);
 }
 
+.demo-panel-background {
+  background: radial-gradient(147.73% 127.89% at 134% 140.86%, #FF9900 22.93%, #794802 42.21%, #1D1102 64.56%, #000004 80.48%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+.demo-horizontal-bar {
+  background: linear-gradient(90deg, #996E00 0%, #FFB800 100%);
+}
+
+.demo-button {
+  background: linear-gradient(90deg, #774700 0%, #DD8400 42.5%);
+}
+
+.ticket-3-background {
+  background: linear-gradient(180deg, #000000 0%, #804D00 50%, #FF9900 100%);
+}
 
