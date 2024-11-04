@@ -9,7 +9,7 @@ const ForDevs = () => {
             devs.map(item => {
                 return(
                     <>
-                        <span className="text-[20px] sm:text-[30px] md:text-[50px]">{item}</span>
+                        <span className="text-[15px] sm:text-[20px] md:text-[25px]">{item}</span>
                     </>
                 )
             })

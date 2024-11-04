@@ -2,7 +2,7 @@ import logo from "./assets/logo.png";
 import email from "./assets/email.png";
 import twitter from "./assets/twitter.png";
 import telegram from "./assets/telegram.png";
-import partnerGif from "./assets/partner.gif";
+import partnerImg from "./assets/partner.png";
 
 import OnChainData from "./components/OnchainData";
 import PlayMethod from "./components/PlayMethod";
@@ -83,12 +83,12 @@ function App() {
               <div className="absolute z-10 left-[-5px] top-[20px] sm:top-[50px] md:top-[55px] lg:top-[85px]">
                 <Ticket rotate={45} isSmall={true} />
               </div>
-              <button href="#" className="absolute z-20 gradient-button rounded-[5px] sm:rounded-[15px] px-[40px] sm:px-[45px] md:px-[65px] lg:px-[85px] xl:px-[60px] py-[10px] sm:py-[25px] md:py-[20px] lg:py-[30px] ring-2 ring-offset-4 ring-offset-black ring-[#720000] text-[15px] md:text-[20px] lg:text-[25px] xl:text-[30px]">
+              <div href="#" className="absolute z-20 gradient-button rounded-[5px] sm:rounded-[15px] px-[40px] sm:px-[45px] md:px-[65px] lg:px-[85px] xl:px-[60px] py-[10px] sm:py-[25px] md:py-[20px] lg:py-[30px] ring-2 ring-offset-4 ring-offset-black ring-[#720000] text-[15px] md:text-[20px] lg:text-[25px] xl:text-[30px]">
                 Get Tickets Win Prizes
-              </button>
+              </div>
             </div>
-            <div className="max-w-[1850px] w-[200px] sm:w-[70%] lg:w-[90%] my-[20px] sm:my-[60px] md:my-[100px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]">
-              <div className="w-full border-2 border-solid border-gray-500 rounded-[20px] uppercase leading-normal tracking-widest text-[10px] sm:text-[15px] md:text-[20px] lg:text-[25px] px-[10px] pt-[50px] pb-[10px] relative">
+            <div className="max-w-[1850px] w-[200px] sm:w-[600px] lg:w-[90%] my-[20px] sm:my-[60px] md:my-[100px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]">
+              <div className="w-full border-2 border-solid border-gray-500 rounded-[10px] sm:rounded-[20px] uppercase leading-normal tracking-widest text-[13px] sm:text-[15px] lg:text-[15px] xl:text-[20px] 2xl:text-[25px] px-[10px] pt-[50px] pb-[10px] relative">
                 <div className="absolute z-[-100] left-[20px] top-0">
                   <Ticket rotate={327} isSmall={false} />
                 </div>
@@ -127,7 +127,7 @@ function App() {
                 <div className="absolute z-[-100] left-[80%] bottom-0">
                   <Ticket rotate={8.22} isSmall={false} />
                 </div>
-                <div className="flex flex-row flex-wrap justify-around items-center gap-[20px] lg:gap-[40px] lx:gap-[60px]">
+                <div className="flex flex-row flex-wrap justify-around items-center gap-[20px] sm:gap-[50px] lg:gap-[40px] lx:gap-[60px]">
                   {onChainData.map((item) => {
                     return <OnChainData name={item.name} value={item.value} />;
                   })}
@@ -166,20 +166,20 @@ function App() {
 
         <div className="radial-gradient-3 flex flex-col my-[50px] sm:my-[80px] md:my-[100px] gap-5 w-[90%] items-center">
           <div className="flex flex-row gap-2">
-            <span className="text-[20px] sm:text-[40px]">Partners</span>
-            <img className="w-[25px] sm:w-[50px]" src={partnerGif} />
+            <span className="text-[20px] sm:text-[30px] md:text-[35px]">Partners</span>
+            <img className="w-[25px] sm:w-[50px]" src={partnerImg} />
           </div>
           <Partners />
         </div>
 
         <div className="flex flex-col my-[20px] sm:my-[50px] w-[90%] items-center justify-center">
-          <div className="text-[30px] sm:text-[50px] mb-[30px] sm:mb-[80px]">For DEVs</div>
+          <div className="text-[20px] sm:text-[30px] md:text-[35px] mb-[30px] sm:mb-[80px]">For DEVs</div>
           <ForDevs />  
         </div>
 
         <div className="radial-gradient-4 flex flex-col my-[30px] sm:my-[60px] md:my-[100px] w-full items-center">
-          <div className="text-[20px] sm:text-[30px] md:text-[40px] mb-[30px] sm:mb-[80px]">Contacts</div>
-          <div className="flex flex-col items-center text-[15px] sm:text-[20px] md:text-[30px] gap-[10px] sm:gap-[20px] md:gap-[50px]">
+          <div className="text-[20px] sm:text-[30px] md:text-[35px] mb-[30px] sm:mb-[80px]">Contacts</div>
+          <div className="flex flex-col items-center text-[15px] sm:text-[20px] md:text-[25px] gap-[10px] sm:gap-[20px] md:gap-[50px]">
             <a href={"http://#"}>example@gmail.components</a>
             <a href={"http://#"}>
               <div className="flex flex-row gap-2">
