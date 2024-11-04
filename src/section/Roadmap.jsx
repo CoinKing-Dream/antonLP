@@ -76,7 +76,7 @@ const Roadmap = () => {
                 return (
                     <>
                         <div className="flex flex-row gap-[20px] justify-center items-center">
-                            <div className={`xl:text-[25px] sm:text-[15px] text-[10px] xl:w-[280px] sm:w-[150px] w-[100px] h-[80px] flex justify-center items-center px-0 rounded-[20px] ${item.now>index?"bg-[#8A5300E5]":"bg-[#4040404D]"}`}>{item.date}</div>
+                            <div className={`xl:text-[25px] sm:text-[15px] text-[10px] xl:w-[280px] sm:w-[150px] w-[100px] h-[80px] flex justify-center items-center px-0 rounded-[20px] ${item.now>index?"bg-[#EF7384]":"bg-[#4040404D]"}`}>{item.date}</div>
                             <div className={`relative flex flex-col gap-5 justify-center items-center w-[200px] sm:w-[300px] h-[171px] overflow-hidden bg-[#4040404D] p-[10px] rounded-[20px]`}>
                                 <div className={`${index==4&&"blur-md"} text-[${item.now<=index?25:20}px] text-center`}>{item.title}</div>
                                 <div className={`${index==4&&"blur-sm"} text-[10px] sm:text-[15px] text-center`}>{item.content}</div>

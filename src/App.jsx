@@ -65,8 +65,8 @@ function App() {
               <img src={logo} alt="logo" className="w-[50px] lg:w-[125px] md:w-[90px] sm:w-[80px]"/>
             </div>
             <div className="flex justify-center">
-              <div className="max-w-[1700px] w-[90%] rounded-[20px] my-[10px] sm:my-[20px] md:my-[30px] lg:my-[80px] mx-[20px] text-center bg-[#D9D9D920] p-[10px]">
-                <div className="w-full border-2 border-solid border-gray-500 rounded-[20px] uppercase leading-normal tracking-widest text-[10px] sm:text-[15px] md:text-[20px] lg:text-[30px] px-[30px]">
+              <div className="max-w-[1500px] w-[90%] rounded-[20px] my-[10px] sm:my-[20px] md:my-[30px] lg:my-[80px] mx-[20px] text-center bg-[#D9D9D920] p-[10px]">
+                <div className="w-full border-2 border-solid border-gray-500 rounded-[10px] sm:rounded-[20px] uppercase leading-normal tracking-widest text-[10px] sm:text-[15px] md:text-[15px] lg:text-[20px] xl:text-[25px] px-[30px]">
                   TonTickets is a telegram mini-app in where people can win many
                   different prizes ranging from popular memecoins to the rarest
                   and most expensive NFT on TON chain
@@ -75,20 +75,20 @@ function App() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center w-full gap-[100px] my-[20px] sm:my-[50px] md:my-[80px] lg:my-[100px]">
-            <div className="relative w-[350px] md:w-[400px] lg:w-[520px] text-center flex flex-col items-center my-[25px] lg:my-[50px]">
+          <div className="flex flex-col items-center justify-center w-full gap-[100px] my-[20px] sm:my-[50px] md:my-[80px]">
+            <div className="relative w-[300px] md:w-[400px] lg:w-[520px] text-center flex flex-col items-center mb-[2px] lg:mb-[50px]">
               <div className="absolute z-10 right-[-5px] top-[-20px]">
                 <Ticket rotate={0} isSmall={true} />
               </div>
-              <div className="absolute z-10 left-[-5px] top-[20px] sm:top-[50px] md:top-[60px] lg:top-[85px]">
+              <div className="absolute z-10 left-[-5px] top-[20px] sm:top-[50px] md:top-[55px] lg:top-[85px]">
                 <Ticket rotate={45} isSmall={true} />
               </div>
-              <button href="#" className="absolute z-20 gradient-button rounded-[15px] px-[60px] py-[10px] sm:py-[20px] md:py-[20px] lg:py-[30px] ring-2 ring-offset-4 ring-offset-black ring-[#720000] font-['Graduate'] text-[15px] md:text-[20px] lg:text-[30px]">
+              <button href="#" className="absolute z-20 gradient-button rounded-[5px] sm:rounded-[15px] px-[40px] sm:px-[45px] md:px-[65px] lg:px-[85px] xl:px-[60px] py-[10px] sm:py-[25px] md:py-[20px] lg:py-[30px] ring-2 ring-offset-4 ring-offset-black ring-[#720000] text-[15px] md:text-[20px] lg:text-[25px] xl:text-[30px]">
                 Get Tickets Win Prizes
               </button>
             </div>
-            <div className="max-w-[1850px] w-[90%] my-[20px] sm:my-[60px] md:my-[100px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]">
-              <div className="w-full border-2 border-solid border-gray-500 rounded-[20px] uppercase leading-normal tracking-widest text-[15px] md:text-[20px] lg:text-[30px] px-[10px] pt-[50px] pb-[10px] relative">
+            <div className="max-w-[1850px] w-[200px] sm:w-[70%] lg:w-[90%] my-[20px] sm:my-[60px] md:my-[100px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]">
+              <div className="w-full border-2 border-solid border-gray-500 rounded-[20px] uppercase leading-normal tracking-widest text-[10px] sm:text-[15px] md:text-[20px] lg:text-[25px] px-[10px] pt-[50px] pb-[10px] relative">
                 <div className="absolute z-[-100] left-[20px] top-0">
                   <Ticket rotate={327} isSmall={false} />
                 </div>
@@ -127,7 +127,7 @@ function App() {
                 <div className="absolute z-[-100] left-[80%] bottom-0">
                   <Ticket rotate={8.22} isSmall={false} />
                 </div>
-                <div className="flex flex-row flex-wrap justify-around items-center gap-[60px]">
+                <div className="flex flex-row flex-wrap justify-around items-center gap-[20px] lg:gap-[40px] lx:gap-[60px]">
                   {onChainData.map((item) => {
                     return <OnChainData name={item.name} value={item.value} />;
                   })}
@@ -137,7 +137,7 @@ function App() {
           </div>
 
           <div className="flex flex-col justify-center items-center gap-[50px] md:gap-[100px] z-[100] w-full">
-            <div className="z-[100] text-[20px] sm:text-[30px] md:text-[40px] mt-[30px] sm:mt-[50px] md:mt-[60px] lg:mt-[100px]">How to start play?</div>
+            <div className="z-[100] text-[20px] sm:text-[30px] md:text-[35px] mt-[30px] sm:mt-[50px] md:mt-[60px] lg:mt-[100px]">How to start play?</div>
             <div className="flex sm:flex-row flex-col items-center justify-center sm:items-start sm:justify-around  gap-5 sm:gap-[50px] relative w-[90%]">
               <div className="sm:h-[1px] sm:w-[80%] h-[400px] left-[40px] w-[1px] sm:left-[50px] md:left-[100px] lg:left-[150px] bg-[#404040] z-[-1000] absolute sm:top-[40px] md:top-[50px] lg:top-[49px] xl:top-[80px]"></div>
               {playMethodData.map((item, index) => {
@@ -155,11 +155,11 @@ function App() {
 
         <div className="radial-gradient-2 my-[50px] sm:my-[60px] md:my-[100px] flex lg:flex-row lg:justify-around flex-col gap-5 w-full max-w-[1500px]">
           <div className="flex flex-col items-center gap-[20px] sm:gap-[50px]">
-            <p className="text-[20px] sm:text-[30px] md:text-[50px]">DEMO</p>
+            <p className="text-[20px] sm:text-[30px] md:text-[35px]">DEMO</p>
             <Demo />
           </div>
           <div className="flex flex-col items-center gap-[20px] sm:gap-[50px] overflow-hidden">
-            <p className="text-[20px] sm:text-[30px] md:text-[50px]">ROADMAP</p>
+            <p className="text-[20px] sm:text-[30px] md:text-[35px]">ROADMAP</p>
             <Roadmap />
           </div>
         </div>

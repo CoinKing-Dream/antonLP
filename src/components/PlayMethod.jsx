@@ -50,8 +50,8 @@ const PlayMethod = ({order, title, content}) => {
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center gap-5 w-full">
-                <div className="text-[20px] sm:text-[15px] md:text-[20px] lg:text-[30px] text-center">{title}</div>
-                <div className="text-[15px] sm:text-[10px] md:text-[15px] lg:text-[20px] text-center">{content}</div>
+                <div className="text-[15px] sm:text-[15px] md:text-[20px] lg:text-[30px] text-center">{title}</div>
+                <div className="text-[10px] sm:text-[10px] md:text-[15px] lg:text-[20px] text-center">{content}</div>
             </div>
         </div>
     )
