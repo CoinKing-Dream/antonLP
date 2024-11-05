@@ -41,7 +41,7 @@ const Demo = () => {
                         </div>
                     </div>
                 </div>
-                <div className="rounded-lg text-[30px] bg-[#565656] px-[30px] py-[20px] mt-[60px]">You Win 1.26 TON</div>
+                <div className="rounded-lg text-[30px] bg-[#565656] px-[30px] py-[20px] mt-[80px] mb-[50px]">You Win 1.26 TON</div>
                 <div className="w-[50%] xl:w-[300px] p-[5px] border-2 border-[#000000]">
                     <img src={ticket} alt="ticket"/>
                 </div>

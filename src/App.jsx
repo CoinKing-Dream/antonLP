@@ -1,3 +1,6 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import logo from "./assets/logo.png";
 import email from "./assets/email.png";
 import twitter from "./assets/twitter.png";
@@ -40,20 +43,40 @@ const onChainData = [
 const playMethodData = [
   {
     title: "Registration",
-    content: (<>Open <span className='text-[#EC7480E5]'>Ton Tickets Bot</span> and connect your TON wallet</>),
+    content: (
+      <>
+        Open <span className="text-[#EC7480E5]">Ton Tickets Bot</span> and
+        connect your TON wallet
+      </>
+    ),
   },
   {
     title: "Your first ticket",
-    content: (<>After you connect ton wallet you will get your first <span className='text-[#EC7480E5]'>FREE</span> ticket</>),
+    content: (
+      <>
+        After you connect ton wallet you will get your first{" "}
+        <span className="text-[#EC7480E5]">FREE</span> ticket
+      </>
+    ),
   },
   {
     title: "Deposit",
-    content:
-    (<>To buy more tickets you need to tap on button “<span className='text-[#EC7480E5]'>Get Tickets</span>” and deposit ton or another coins, and after you can buy more tickets</>),
+    content: (
+      <>
+        To buy more tickets you need to tap on button “
+        <span className="text-[#EC7480E5]">Get Tickets</span>” and deposit ton
+        or another coins, and after you can buy more tickets
+      </>
+    ),
   },
   {
     title: "Play!",
-    content: (<>Great, now you've got tickets, hurry up open them and enjoy <span className='text-[#EC7480E5]'>&lt;3</span></>),
+    content: (
+      <>
+        Great, now you've got tickets, hurry up open them and enjoy{" "}
+        <span className="text-[#EC7480E5]">&lt;3</span>
+      </>
+    ),
   },
 ];
 
@@ -65,22 +88,64 @@ function App() {
       SetIsScrollDown(window.scrollY > 50 ? true : false);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate", // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 400, // values from 0 to 3000, with step 50ms
+      easing: "ease", // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+    });
+    AOS.refresh();
   }, []);
 
   return (
     <>
       <div className="w-full flex flex-col items-center justify-center relative">
-        <div className="radial-gradient-1 w-full z-[-105]">
-          <div className={`w-full flex justify-center items-center h-[100px] sm:h-[150px] md:h-[170px] lg:h-[200px] fixed z-[100000] ${isScrollDown?"bg-gray-900":"bg-transparent"}`}>
-            <img src={logo} alt="logo" className="w-[50px] lg:w-[125px] md:w-[90px] sm:w-[80px] h-[50px] sm:h-[80px] md:h-[100px] lg:h-[130px]"/>
+        <div className="radial-gradient-1 w-full">
+          <div
+            className={`w-full flex justify-center items-center transition ease-in-out delay-150 fixed z-[100000] border-b-2 border-white ${
+              isScrollDown
+                ? "bg-gray-900 h-[70px] sm:h-[90px] md:h-[110px] lg:h-[130px] "
+                : "bg-transparent h-[100px] sm:h-[120px] md:h-[130px] lg:h-[150px] "
+            }`}
+          >
+            <img
+              src={logo}
+              alt="logo"
+              className={`transition ease-in-out delay-150 ${
+                !isScrollDown
+                  ? "w-[50px] lg:w-[100px] md:w-[80px] sm:w-[70px] h-[50px] sm:h-[70px] md:h-[80px] lg:h-[100px]"
+                  : "w-[40px] lg:w-[80px] md:w-[60px] sm:w-[50px] h-[40px] sm:h-[50px] md:h-[60px] lg:h-[80px]"
+              }`}
+            />
           </div>
-          <div className="divide-y">
-            <div className={`w-full h-[100px] sm:h-[150px] md:h-[170px] lg:h-[200px]`}></div>
+          <div
+            className="mt-[100px] sm:mt-[120px] md:mt-[130px] lg:mt-[150px]"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="easing-in-out"
+          >
             <div className="flex justify-center">
               <div className="max-w-[1500px] w-[90%] rounded-[20px] my-[10px] sm:my-[20px] md:my-[30px] lg:my-[80px] mx-[20px] text-center bg-[#D9D9D920] p-[10px]">
                 <div className="w-full border-2 border-solid border-gray-500 rounded-[10px] sm:rounded-[20px] uppercase leading-normal tracking-widest text-[10px] sm:text-[15px] md:text-[15px] lg:text-[20px] xl:text-[25px] px-[30px]">
@@ -93,7 +158,13 @@ function App() {
           </div>
 
           <div className="flex flex-col items-center justify-center w-full gap-[100px] my-[30px] sm:my-[50px] md:my-[80px]">
-            <div className="relative w-[300px] md:w-[400px] lg:w-[520px] text-center flex flex-col items-center mb-[2px] lg:mb-[50px]">
+            <div
+              className="relative w-[300px] md:w-[400px] lg:w-[520px] text-center flex flex-col items-center mb-[2px] lg:mb-[50px]"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+              data-aos-easing="easing-in-out"
+            >
               <div className="absolute z-10 right-[-5px] top-[-20px]">
                 <Ticket rotate={0} isSmall={true} />
               </div>
@@ -104,7 +175,13 @@ function App() {
                 Get Tickets Win Prizes
               </button>
             </div>
-            <div className="max-w-[1850px] w-[200px] sm:w-[600px] lg:w-[90%] my-[20px] sm:my-[60px] md:my-[100px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]">
+            <div
+              className="max-w-[1850px] w-[200px] sm:w-[600px] lg:w-[90%] my-[20px] sm:my-[60px] md:my-[100px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+              data-aos-easing="easing-in-out"
+            >
               <div className="w-full border-2 border-solid border-gray-500 rounded-[10px] sm:rounded-[20px] uppercase leading-normal tracking-widest text-[13px] sm:text-[15px] lg:text-[15px] xl:text-[20px] 2xl:text-[25px] px-[10px] pt-[50px] pb-[10px] relative">
                 <div className="absolute z-[-100] left-[20px] top-0">
                   <Ticket rotate={327} isSmall={false} />
@@ -153,8 +230,16 @@ function App() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center items-center gap-[50px] md:gap-[100px] z-[100] w-full">
-            <div className="z-[100] text-[20px] sm:text-[30px] md:text-[35px] mt-[30px] sm:mt-[50px] md:mt-[60px] lg:mt-[100px]">How to start play?</div>
+          <div
+            className="flex flex-col justify-center items-center gap-[50px] md:gap-[100px] z-[100] w-full"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="easing-in-out"
+          >
+            <div className="z-[100] text-[20px] sm:text-[30px] md:text-[35px] mt-[30px] sm:mt-[50px] md:mt-[60px] lg:mt-[100px]">
+              How to start play?
+            </div>
             <div className="flex sm:flex-row flex-col items-center justify-center sm:items-start sm:justify-around  gap-5 sm:gap-[50px] relative w-[90%]">
               <div className="sm:h-[1px] sm:w-[80%] h-[400px] left-[40px] w-[1px] sm:left-[50px] md:left-[100px] lg:left-[150px] bg-[#404040] z-[-1000] absolute sm:top-[40px] md:top-[50px] lg:top-[49px] xl:top-[80px]"></div>
               {playMethodData.map((item, index) => {
@@ -170,51 +255,122 @@ function App() {
           </div>
         </div>
 
-        <div className="radial-gradient-2 my-[50px] sm:my-[60px] md:my-[100px] flex lg:flex-row lg:justify-around flex-col gap-5 w-full max-w-[1500px]">
-          <div className="flex flex-col items-center gap-[20px] sm:gap-[50px]">
+        <div className="radial-gradient-2 my-[50px] sm:my-[60px] md:my-[100px] z-[1000] flex lg:flex-row lg:justify-around flex-col gap-5 w-full max-w-[1500px]">
+          <div
+            className="flex flex-col items-center gap-[20px] sm:gap-[50px]"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="easing-in-out"
+          >
             <p className="text-[20px] sm:text-[30px] md:text-[35px]">DEMO</p>
             <Demo />
           </div>
-          <div className="flex flex-col items-center gap-[20px] sm:gap-[50px] overflow-hidden">
+          <div
+            className="flex flex-col items-center gap-[20px] sm:gap-[50px] overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="easing-in-out"
+          >
             <p className="text-[20px] sm:text-[30px] md:text-[35px]">ROADMAP</p>
             <Roadmap />
           </div>
         </div>
 
-        <div className="radial-gradient-3 flex flex-col my-[50px] sm:my-[80px] md:my-[100px] gap-5 w-[90%] items-center">
+        <div
+          className="radial-gradient-3 flex flex-col my-[50px] sm:my-[80px] md:my-[100px] gap-5 w-[90%] items-center"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          data-aos-easing="easing-in-out"
+        >
           <div className="flex flex-row gap-2">
-            <span className="text-[20px] sm:text-[30px] md:text-[35px]">Partners</span>
+            <span className="text-[20px] sm:text-[30px] md:text-[35px]">
+              Partners
+            </span>
             <img className="w-[25px] sm:w-[50px]" src={partnerImg} />
           </div>
           <Partners />
         </div>
 
-        <div className="flex flex-col my-[20px] sm:my-[50px] w-[90%] items-center justify-center">
-          <div className="text-[20px] sm:text-[30px] md:text-[35px] mb-[30px] sm:mb-[80px]">For DEVs</div>
-          <ForDevs />  
+        <div
+          className="flex flex-col my-[20px] sm:my-[50px] w-[90%] items-center justify-center"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          data-aos-easing="easing-in-out"
+        >
+          <div className="text-[20px] sm:text-[30px] md:text-[35px] mb-[30px] sm:mb-[80px]">
+            For DEVs
+          </div>
+          <ForDevs />
         </div>
 
         <div className="radial-gradient-4 flex flex-col my-[30px] sm:my-[60px] md:my-[100px] w-full items-center">
-          <div className="text-[20px] sm:text-[30px] md:text-[35px] mb-[30px] sm:mb-[80px]">Contacts</div>
+          <div className="text-[20px] sm:text-[30px] md:text-[35px] mb-[30px] sm:mb-[80px]">
+            Contacts
+          </div>
           <div className="flex flex-col items-center text-[15px] sm:text-[20px] md:text-[25px] gap-[10px] sm:gap-[20px] md:gap-[50px]">
-            <a href={"http://#"}>example@gmail.components</a>
-            <a href={"http://#"}>
+            <a
+              href={"http://#"}
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+              data-aos-easing="easing-in-out"
+            >
+              example@gmail.components
+            </a>
+            <a
+              href={"http://#"}
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+              data-aos-easing="easing-in-out"
+            >
               <div className="flex flex-row gap-2">
-                <img src={telegram} className="w-[20px] sm:w-[30px] md:w-[50px]"/>
+                <img
+                  src={telegram}
+                  className="w-[20px] sm:w-[30px] md:w-[50px]"
+                />
                 <div>Partnership</div>
               </div>
             </a>
-            <a href={"http://#"}>
+            <a
+              href={"http://#"}
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+              data-aos-easing="easing-in-out"
+            >
               <div className="flex flex-row gap-2">
-                <img src={telegram} className="w-[20px] sm:w-[30px] md:w-[50px]"/>
+                <img
+                  src={telegram}
+                  className="w-[20px] sm:w-[30px] md:w-[50px]"
+                />
                 <div>Support</div>
               </div>
             </a>
           </div>
-          <div className="flex flex-row gap-5 mt-[100px]">
-            <a href={"http://#"}><img src={twitter} className="w-[20px] sm:w-[30px] md:w-[50px]"/></a>
-            <a href={"http://#"}><img src={telegram} className="w-[20px] sm:w-[30px] md:w-[50px]"/></a>
-            <a href={"http://#"}><img src={email} className="w-[20px] sm:w-[30px] md:w-[50px]"/></a>
+          <div
+            className="flex flex-row gap-5 mt-[100px]"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="easing-in-out"
+          >
+            <a href={"http://#"}>
+              <img src={twitter} className="w-[20px] sm:w-[30px] md:w-[50px]" />
+            </a>
+            <a href={"http://#"}>
+              <img
+                src={telegram}
+                className="w-[20px] sm:w-[30px] md:w-[50px]"
+              />
+            </a>
+            <a href={"http://#"}>
+              <img src={email} className="w-[20px] sm:w-[30px] md:w-[50px]" />
+            </a>
           </div>
         </div>
       </div>
