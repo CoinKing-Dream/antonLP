@@ -120,7 +120,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full flex flex-col items-center justify-center relative">
+      <div className="w-full flex flex-col items-center justify-center relative mb-[80px] sm:mb-[40px] md:mb-0">
         <div className="radial-gradient-1 w-full">
           <div
             className={`w-full flex justify-center items-center transition ease-in-out delay-150 fixed z-[100000] border-b-2 border-white ${
@@ -279,12 +279,13 @@ function App() {
         </div>
 
         <div
-          className="radial-gradient-3 flex flex-col my-[50px] sm:my-[80px] md:my-[100px] gap-5 w-[90%] items-center"
+          className="relative flex flex-col my-[50px] sm:my-[80px] md:my-[100px] gap-5 w-[90%] items-center overflow-hidden"
           data-aos="fade-up"
           data-aos-delay="100"
           data-aos-duration="1000"
           data-aos-easing="easing-in-out"
         >
+          <div className="absolute z-[-1] radial-gradient-3 w-[300px] h-[900px] sm:w-[500px] sm:h-[800px] sm:left-[5vw] md:w-[500px] md:h-[1000px] md:left-[10vw] top-[0px] "></div>
           <div className="flex flex-row gap-2">
             <span className="text-[20px] sm:text-[30px] md:text-[35px]">
               Partners
@@ -293,84 +294,89 @@ function App() {
           </div>
           <Partners />
         </div>
-
-        <div
-          className="flex flex-col my-[20px] sm:my-[50px] w-[90%] items-center justify-center"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-duration="1000"
-          data-aos-easing="easing-in-out"
-        >
-          <div className="text-[20px] sm:text-[30px] md:text-[35px] mb-[30px] sm:mb-[80px]">
-            For DEVs
-          </div>
-          <ForDevs />
-        </div>
-
-        <div className="radial-gradient-4 flex flex-col my-[30px] sm:my-[60px] md:my-[100px] w-full items-center">
-          <div className="text-[20px] sm:text-[30px] md:text-[35px] mb-[30px] sm:mb-[80px]">
-            Contacts
-          </div>
-          <div className="flex flex-col items-center text-[15px] sm:text-[20px] md:text-[25px] gap-[10px] sm:gap-[20px] md:gap-[50px]">
-            <a
-              href={"http://#"}
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-duration="1000"
-              data-aos-easing="easing-in-out"
-            >
-              example@gmail.components
-            </a>
-            <a
-              href={"http://#"}
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-duration="1000"
-              data-aos-easing="easing-in-out"
-            >
-              <div className="flex flex-row gap-2">
-                <img
-                  src={telegram}
-                  className="w-[20px] sm:w-[30px] md:w-[50px]"
-                />
-                <div>Partnership</div>
-              </div>
-            </a>
-            <a
-              href={"http://#"}
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-duration="1000"
-              data-aos-easing="easing-in-out"
-            >
-              <div className="flex flex-row gap-2">
-                <img
-                  src={telegram}
-                  className="w-[20px] sm:w-[30px] md:w-[50px]"
-                />
-                <div>Support</div>
-              </div>
-            </a>
-          </div>
+        <div className="flex flex-col items-center justify-center w-full relative overflow-hidden">
           <div
-            className="flex flex-row gap-5 mt-[100px]"
+            className="flex flex-col my-[20px] sm:my-[50px] w-[90%] items-center justify-center"
             data-aos="fade-up"
             data-aos-delay="100"
             data-aos-duration="1000"
             data-aos-easing="easing-in-out"
           >
-            <a href={"http://#"}>
-              <img src={twitter} className="w-[20px] sm:w-[30px] md:w-[50px]" />
-            </a>
-            <a href={"http://#"}>
-              <img
-                src={telegram}
-                className="w-[20px] sm:w-[30px] md:w-[50px]"
-              />
-            </a>
-            <a href={"http://#"}>
-              <img src={email} className="w-[20px] sm:w-[30px] md:w-[50px]" />
-            </a>
+            <div className="text-[20px] sm:text-[30px] md:text-[35px] mb-[30px] sm:mb-[80px]">
+              For DEVs
+            </div>
+            <ForDevs />
+          </div>
+          <div className="absolute radial-gradient-4 w-[200px] h-[500px] top-[200px] right-[20vw] sm:w-[200px] sm:h-[800px] sm:top-[100px] sm:right-[20vw] md:w-[300px] md:h-[1200px] md:top-[200px] md:right-[30vw] lg:w-[500px] lg:h-[1500px] lg:top-[-200px] lg:right-[20vw] xl:w-[700px] xl:h-[1700px] xl:top-[-300px] xl:right-[20vw] z-[-1]"></div>
+
+          <div className="flex flex-col my-[30px] sm:my-[60px] md:my-[100px] w-full items-center">
+            <div className="text-[20px] sm:text-[30px] md:text-[35px] mb-[30px] sm:mb-[80px]">
+              Contacts
+            </div>
+            <div className="flex flex-col items-center text-[15px] sm:text-[20px] md:text-[25px] gap-[10px] sm:gap-[20px] md:gap-[50px]">
+              <a
+                href={"http://#"}
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+                data-aos-easing="easing-in-out"
+              >
+                example@gmail.components
+              </a>
+              <a
+                href={"http://#"}
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+                data-aos-easing="easing-in-out"
+              >
+                <div className="flex flex-row gap-2">
+                  <img
+                    src={telegram}
+                    className="w-[20px] sm:w-[30px] md:w-[50px]"
+                  />
+                  <div>Partnership</div>
+                </div>
+              </a>
+              <a
+                href={"http://#"}
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+                data-aos-easing="easing-in-out"
+              >
+                <div className="flex flex-row gap-2">
+                  <img
+                    src={telegram}
+                    className="w-[20px] sm:w-[30px] md:w-[50px]"
+                  />
+                  <div>Support</div>
+                </div>
+              </a>
+            </div>
+            <div
+              className="flex flex-row gap-5 mt-[100px] z-1"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+              data-aos-easing="easing-in-out"
+            >
+              <a href={"http://#"}>
+                <img
+                  src={twitter}
+                  className="w-[20px] sm:w-[30px] md:w-[50px]"
+                />
+              </a>
+              <a href={"http://#"}>
+                <img
+                  src={telegram}
+                  className="w-[20px] sm:w-[30px] md:w-[50px]"
+                />
+              </a>
+              <a href={"http://#"}>
+                <img src={email} className="w-[20px] sm:w-[30px] md:w-[50px]" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -34,15 +34,15 @@
 .radial-gradient-2 {
   background-image: radial-gradient(closest-side,#000000 44%, #1A1A1A 57%, #000004 76%);
   width: 100vw;
-  background-color: white !important;
 }
 .radial-gradient-3 {
   background-image: radial-gradient(closest-side, #000000 44%, #1A1A1A 57%, #000004 76%);
-  background-color: white !important;
+  transform: rotate(-45deg);
 }
 .radial-gradient-4 {
   background-image: radial-gradient(closest-side, #000000 44%, #1A1A1A 57%, #000004 76%);
-  background-color: white !important;
+  transform: rotate(45deg);
+  /* background-color: red; */
 }
 
 .gradient-button {
