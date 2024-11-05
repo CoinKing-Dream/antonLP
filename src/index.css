@@ -28,7 +28,7 @@
 
 .radial-gradient-1 {
   background-image: radial-gradient(#000000 44%, #1A1A1A 57%, #000004 76%);
-  transform: rotate(25deg);
+  transform: rotate(35deg);
 }
 
 .radial-gradient-2 {
