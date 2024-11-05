@@ -78,14 +78,16 @@ const Roadmap = () => {
                 return (
                     <>
                         <div className="flex flex-row gap-[10px] justify-between items-center">
-                            <div className={`xl:text-[18px] lg:text-[15px] md:text-[13px] sm:text-[15px] text-[12px] text-center md:p-2 xl:w-[210px] lg:w-[155px] md:w-[90px] sm:w-[150px] w-[80px] h-[80px] flex justify-center items-center px-0 rounded-[10px] lg:rounded-[15px] xl:rounded-[20px] ${item.now>index?"bg-[#EF7384]":"bg-[#4040404D]"}`}>{item.date}</div>
+                            <div className={`xl:text-[18px] lg:text-[15px] md:text-[13px] sm:text-[15px] text-[12px] text-center px-5 md:p-2 xl:w-[210px] lg:w-[155px] md:w-[90px] sm:w-[150px] w-[80px] h-[80px] flex justify-center items-center px-0 rounded-[10px] lg:rounded-[15px] xl:rounded-[20px] ${item.now>index?"bg-[#EF7384]":"bg-[#404040DF]"}`}>
+                                {item.date}
+                            </div>
                             <div className={`relative flex flex-col gap-3 sm:gap-5 justify-center items-center sm:w-[340px] md:w-[80%] w-[80%] lg:w-[280px] xl:w-[300px] h-[190px] sm:h-[133px] md:h-[134px] lg:h-[150px] xl:h-[171px] overflow-hidden bg-[#4040404D] p-[10px] rounded-[20px]`}>
                                 <div className={`${index==4&&"blur-md select-none"} lg:text-[${item.now<=index?20:15}px] md:text-[${item.now<=index?15:12}px] text-center max-w-[70%]`}>{item.title}</div>
                                 <div className={`${index==4&&"blur-sm select-none"} text-[12px] md:text-[10px] lg:text-[12px] text-center`}>{item.content}</div>
                                 <img className={`absolute top-[25px] right-[10px] ${index>=3?"md:top-[30px] sm:top-[10px] top-[20px]":"top-[5px]"} sm:right-[1px] w-[30px] sm:w-[40px]`} src={item.icon}/>
                             </div>
                         </div>
-                        <div className={`flex flex-col justify-center items-center absolute z-[-100]`} 
+                        <div className={`flex flex-col justify-center items-center absolute z-[-100] mix-blend-color-burn`} 
                             style={{top: `${index?topMoveValue*index-65:topMoveValue*index}px`, left: `${index?leftMoveValue:leftMoveValue-20}px`}}>
                         {
                             !index?
