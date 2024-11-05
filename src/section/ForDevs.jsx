@@ -6,7 +6,7 @@ const ForDevs = () => {
     return (
         <div className="flex flex-row flex-wrap justify-center gap-[20px] max-w-[1663px]">
         {
-            devs.map(item => {
+            devs.map((item, index) => {
                 return(
                     <>
                         <span className="text-[15px] sm:text-[20px] md:text-[25px]">{item}</span>

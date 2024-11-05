@@ -121,7 +121,8 @@ function App() {
   return (
     <>
       <div className="w-full flex flex-col items-center justify-center relative mb-[80px] sm:mb-[40px] md:mb-0">
-        <div className="radial-gradient-1 w-full">
+        <div className="w-full relative overflow-hidden">
+          <div className="absolute top-[150px] sm:top-0 right-[100px] sm:right-[200px] z-[-1] radial-gradient-1 lg:w-[80vw] lg:h-[1600px] md:w-[60vw] md:h-[1200px] sm:w-[40vw] sm:h-[1000px] w-[40vw] h-[600px]"></div>
           <div
             className={`w-full flex justify-center items-center transition ease-in-out delay-150 fixed z-[100000] border-b-2 border-white ${
               isScrollDown
@@ -237,17 +238,20 @@ function App() {
             data-aos-duration="1000"
             data-aos-easing="easing-in-out"
           >
-            <div className="z-[100] text-[20px] sm:text-[30px] md:text-[35px] mt-[30px] sm:mt-[50px] md:mt-[60px] lg:mt-[100px]">
+            <div className="z-[100] text-[20px] sm:text-[30px] md:text-[35px] mt-0">
               How to start play?
             </div>
             <div className="flex sm:flex-row flex-col items-center justify-center sm:items-start sm:justify-around  gap-5 sm:gap-[50px] relative w-[90%]">
-              <div className="sm:h-[1px] sm:w-[80%] h-[400px] left-[40px] w-[1px] sm:left-[50px] md:left-[100px] lg:left-[150px] bg-[#404040] z-[-1000] absolute sm:top-[40px] md:top-[50px] lg:top-[49px] xl:top-[80px]"></div>
+              <div className="sm:h-[1px] sm:w-[80%] h-[400px] left-[40px] w-[1px] sm:left-[50px] md:left-[100px] lg:left-[150px] bg-[#404040] z-[-1000] absolute top-[40px] md:top-[50px] lg:top-[49px] xl:top-[80px]"></div>
               {playMethodData.map((item, index) => {
                 return (
                   <PlayMethod
                     order={index + 1}
                     title={item.title}
                     content={item.content}
+                    data-aos="fade-up"
+                    data-aos-delay={`${index*1000}`}
+                    data-aos-easing="easing-in-out"
                   />
                 );
               })}
@@ -255,7 +259,7 @@ function App() {
           </div>
         </div>
 
-        <div className="radial-gradient-2 my-[50px] sm:my-[60px] md:my-[100px] z-[1000] flex lg:flex-row lg:justify-around flex-col gap-5 w-full max-w-[1500px]">
+        {/* <div className="radial-gradient-2 my-[50px] sm:my-[60px] md:my-[100px] z-[1000] flex lg:flex-row lg:justify-around flex-col gap-5 w-full max-w-[1500px]">
           <div
             className="flex flex-col items-center gap-[20px] sm:gap-[50px]"
             data-aos="fade-up"
@@ -276,7 +280,7 @@ function App() {
             <p className="text-[20px] sm:text-[30px] md:text-[35px]">ROADMAP</p>
             <Roadmap />
           </div>
-        </div>
+        </div> */}
 
         <div
           className="relative flex flex-col my-[50px] sm:my-[80px] md:my-[100px] gap-5 w-[90%] items-center overflow-hidden"
@@ -285,7 +289,7 @@ function App() {
           data-aos-duration="1000"
           data-aos-easing="easing-in-out"
         >
-          <div className="absolute z-[-1] radial-gradient-3 w-[300px] h-[900px] sm:w-[500px] sm:h-[800px] sm:left-[5vw] md:w-[500px] md:h-[1000px] md:left-[10vw] top-[0px] "></div>
+          <div className="absolute z-[-1] radial-gradient-3 w-[60vw] h-[400px] sm:w-[500px] sm:h-[800px] sm:left-[5vw] md:w-[500px] md:h-[1000px] md:left-[10vw] top-[0px]"></div>
           <div className="flex flex-row gap-2">
             <span className="text-[20px] sm:text-[30px] md:text-[35px]">
               Partners
