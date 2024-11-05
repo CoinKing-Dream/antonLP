@@ -9,8 +9,8 @@ import menu_4 from "../assets/menu-4.png";
 
 const Demo = () => {
     return (
-        <div className="flex justify-center items-start gap-5 bg-[#4040404D] rounded-[30px] relative 2xl:w-[626px] md:w-[45vw] w-[90vw] max-w-[500px] px-[20px] py-[10px]">
-            <div className="flex flex-col items-center gap-3 w-full demo-panel-background rounded-[20px]">
+        <div className="flex justify-center items-start gap-5 bg-[#4040404D] rounded-[30px] relative h-[770px] lg:h-[845px] xl:h-[932px] xl:w-[626px] md:w-[46vw] w-[90vw] max-w-[500px] px-[20px] py-[10px]">
+            <div className="flex flex-col items-center gap-3 w-full demo-panel-background rounded-[20px] h-[750px] lg:h-[825px] xl:h-[912px] relative">
                 <div className="flex flex-row justify-between items-center font-['Inter'] w-full p-5 text-[15px] sm:text-[15px] lg:text-[20px]">
                     <div className="flex flex-row bg-[#404040] px-3 rounded-[12px]">🎁&nbsp;Prizes</div>
                     <div className="flex flex-row items-center justify-center gap-2 bg-[#404040] px-3 rounded-[12px] gap-1">
@@ -41,11 +41,11 @@ const Demo = () => {
                         </div>
                     </div>
                 </div>
-                <div className="rounded-lg text-[20px] lg:text-[30px] bg-[#565656] px-[10px] md:px-[15px] lg:px-[30px] py-[20px] mt-[30px] sm:mt-[50px] md:mt-[80px] mb-[50px]">You Win 1.26 TON</div>
+                <div className="rounded-lg text-[20px] lg:text-[30px] bg-[#565656] px-[10px] md:px-[15px] lg:px-[30px] py-[20px] mt-[80px] sm:mt-[50px] md:mt-[80px] mb-[50px]">You Win 1.26 TON</div>
                 <div className="w-[50%] xl:w-[300px] p-[5px] border-2 border-[#000000]">
                     <img src={ticket} alt="ticket"/>
                 </div>
-                <div className="mt-[35px] sm:mt-[50px] bg-[#40404066] w-full flex flex-row justify-between items-center rounded-b-[20px] text-[10px] sm:text-[15px] ">
+                <div className="absolute bottom-0 mt-[35px] sm:mt-[50px] bg-[#40404066] w-full flex flex-row justify-between items-center rounded-b-[20px] text-[10px] sm:text-[15px] ">
                     <div className="flex flex-col justify-center items-center bg-black pb-[10px] pt-[15px] px-[10px] rounded-[10px] md:pt-[20px] md:px-[10px] md:rounded-[15px] xl:pt-[25px] xl:px-[20px] xl:rounded-[20px]">
                         <img src={ticket_1}/>
                         <div>Tickets</div>

@@ -259,7 +259,7 @@ function App() {
           </div>
         </div>
 
-        <div className="radial-gradient-2 my-[50px] sm:my-[60px] md:my-[100px] z-[1000] flex lg:flex-row lg:justify-around flex-col gap-5 w-full max-w-[1500px]">
+        <div className="radial-gradient-2 my-[50px] sm:my-[60px] md:my-[100px] z-[1000] flex md:flex-row md:justify-around flex-col gap-1 w-full max-w-[1500px]">
           <div
             className="flex flex-col items-center gap-[20px] sm:gap-[50px]"
             data-aos="fade-up"
