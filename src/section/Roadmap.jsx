@@ -70,7 +70,7 @@ const Roadmap = () => {
     const leftMoveValue = useWindowSize();
 
     return (
-        <div className="flex flex-col gap-[30px] bg-[#4040404D] px-[10px] lg:px-[20px] py-[10px] rounded-[20px] relative h-[942px]">
+        <div className="flex flex-col gap-[30px] bg-[#4040404D] px-[10px] lg:px-[20px] py-[10px] rounded-[20px] relative h-[942px] max-w-[500px]">
         {
             roadMap.map((item, index) => {
                 return (
