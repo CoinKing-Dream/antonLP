@@ -85,7 +85,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      SetIsScrollDown(window.scrollY > 50 ? true : false);
+      SetIsScrollDown(window.scrollY > 10 ? true : false);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -124,16 +124,16 @@ function App() {
         <div className="w-full relative overflow-hidden">
           <div className="absolute top-[150px] sm:top-0 right-[100px] sm:right-[200px] z-[-1] radial-gradient-1 max-w-[1000px] lg:w-[80vw] lg:h-[1600px] md:w-[60vw] md:h-[1200px] sm:w-[40vw] sm:h-[1000px] w-[40vw] h-[600px]"></div>
           <div
-            className={`w-full flex justify-center items-center transition ease-in-out delay-150 fixed z-[100000] border-b-2 border-white ${
+            className={`w-full flex justify-center items-center fixed z-[10000] border-b-2 border-white transition-all duration-1000 ease-out ${
               isScrollDown
-                ? "bg-gray-900 h-[70px] sm:h-[90px] md:h-[110px] lg:h-[130px] "
-                : "bg-transparent h-[100px] sm:h-[120px] md:h-[130px] lg:h-[150px] "
+                ? "bg-black opacity-90 h-[70px] sm:h-[90px] md:h-[110px] lg:h-[130px]"
+                : "bg-transparent h-[100px] sm:h-[120px] md:h-[130px] lg:h-[150px]"
             }`}
           >
             <img
               src={logo}
               alt="logo"
-              className={`transition ease-in-out delay-150 ${
+              className={`${
                 !isScrollDown
                   ? "w-[50px] lg:w-[100px] md:w-[80px] sm:w-[70px] h-[50px] sm:h-[70px] md:h-[80px] lg:h-[100px]"
                   : "w-[40px] lg:w-[80px] md:w-[60px] sm:w-[50px] h-[40px] sm:h-[50px] md:h-[60px] lg:h-[80px]"
