@@ -25,7 +25,7 @@ const Demo = () => {
                         <img src={downmenu_mark} />
                     </button>
                 </div>
-                <div className="flex flex-row justify-between items-center text-[20px] lg:text-[30px] w-[95%]">
+                <div className="flex flex-row justify-between items-center text-[18px] sm:text-[20px] lg:text-[25px] w-[95%]">
                     <div className="flex flex-row gap-1 justify-center items-center">
                         <div>99</div>
                         <img src={ticket_1} />
