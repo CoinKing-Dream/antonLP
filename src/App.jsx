@@ -259,7 +259,7 @@ function App() {
           </div>
         </div>
 
-        <div className="radial-gradient-2 my-[50px] sm:my-[60px] md:my-[100px] z-[1000] flex md:flex-row md:justify-around flex-col gap-1 w-full max-w-[1500px]">
+        <div className="radial-gradient-2 mt-[50px] sm:mt-[60px] md:mt-[100px] z-[1000] flex md:flex-row md:justify-around flex-col gap-1 w-full max-w-[1500px]">
           <div
             className="flex flex-col items-center gap-[20px] sm:gap-[50px]"
             data-aos="fade-up"
@@ -283,14 +283,14 @@ function App() {
         </div>
 
         <div
-          className="relative flex flex-col my-[50px] sm:my-[80px] md:my-[100px] gap-5 w-[90%] items-center overflow-hidden"
+          className="relative flex flex-col py-[150px] sm:py-[100px] md:py-[150px] lg:py-[200px] gap-5 w-[90%] items-center overflow-hidden"
           data-aos="fade-up"
           data-aos-delay="100"
           data-aos-duration="1000"
           data-aos-easing="easing-in-out"
         >
-          <div className="absolute z-[-1] radial-gradient-3 w-[60vw] h-[400px] sm:w-[500px] sm:h-[800px] sm:left-[5vw] md:w-[500px] md:h-[1000px] md:left-[10vw] top-[0px]"></div>
-          <div className="flex flex-row gap-2">
+          <div className="absolute z-[-1] radial-gradient-3 w-[50vw] h-[1000px] top-[200px] rotate-[-20deg] sm:rotate-[-35deg] sm:w-[500px] sm:h-[1000px] sm:top-[120px] sm:left-[5vw] md:w-[500px] md:h-[1400px] md:left-[10vw] lg:w-[700px] md:top-[50px] lg:h-[1400px] lg:left-[10vw] lg:top-[50px]"></div>
+          <div className="flex flex-row gap-2 my-[50px]">
             <span className="text-[20px] sm:text-[30px] md:text-[35px]">
               Partners
             </span>
