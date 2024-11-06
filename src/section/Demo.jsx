@@ -42,7 +42,7 @@ const Demo = () => {
                     </div>
                 </div>
                 <div className="rounded-lg text-[20px] lg:text-[30px] bg-[#565656] px-[10px] md:px-[15px] lg:px-[30px] py-[20px] mt-[80px] sm:mt-[50px] md:mt-[80px] mb-[50px]">You Win 1.26 TON</div>
-                <div className="w-[50%] xl:w-[300px] p-[5px] border-2 border-[#000000]">
+                <div className="min-w-[200px] w-[50%] xl:w-[300px] p-[5px]">
                     <img src={ticket} alt="ticket"/>
                 </div>
                 <div className="absolute bottom-0 mt-[35px] sm:mt-[50px] bg-[#40404066] w-full flex flex-row justify-between items-center rounded-b-[20px] text-[10px] sm:text-[15px] ">
