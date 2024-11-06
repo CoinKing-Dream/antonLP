@@ -122,7 +122,7 @@ function App() {
     <>
       <div className="w-full flex flex-col items-center justify-center relative mb-[80px] sm:mb-[40px] md:mb-0">
         <div className="w-full relative overflow-hidden">
-          <div className="absolute top-[150px] sm:top-0 right-[100px] sm:right-[200px] z-[-1] radial-gradient-1 lg:w-[80vw] lg:h-[1600px] md:w-[60vw] md:h-[1200px] sm:w-[40vw] sm:h-[1000px] w-[40vw] h-[600px]"></div>
+          <div className="absolute top-[150px] sm:top-0 right-[100px] sm:right-[200px] z-[-1] radial-gradient-1 max-w-[1000px] lg:w-[80vw] lg:h-[1600px] md:w-[60vw] md:h-[1200px] sm:w-[40vw] sm:h-[1000px] w-[40vw] h-[600px]"></div>
           <div
             className={`w-full flex justify-center items-center fixed z-[10000] border-b-2 border-white transition-all duration-1000 ease-out ${
               isScrollDown
