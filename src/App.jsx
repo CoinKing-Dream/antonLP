@@ -187,39 +187,77 @@ function App() {
                 <div className="absolute z-[-100] left-[20px] top-0 sm:block hidden">
                   <Ticket rotate={327} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
-                <div className="absolute z-[-100] sm:left-[20%] sm:top-0 left-[20px] top-[100px]">
+                <div className="absolute z-[-100] left-[20%] top-0 sm:block hidden">
                   <Ticket rotate={193} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
                 <div className="absolute z-[-100] left-[50%] top-0 sm:block hidden">
                   <Ticket rotate={20.92} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
-                <div className="absolute z-[-100] sm:left-[65%] sm:top-0 left-[10px] bottom-[150px]">
+                <div className="absolute z-[-100] left-[65%] top-0 sm:block hidden">
                   <Ticket rotate={347} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
-                <div className="absolute z-[-100] sm:left-[80%] sm:top-0 left-0 top-0">
+                <div className="absolute z-[-100] left-[80%] top-0 sm:block hidden">
                   <Ticket rotate={354} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
-
-                <div className="absolute z-[-1000] right-[10px] top-0">
+                <div className="absolute z-[-1000] right-[10px] top-0 sm:block hidden">
                   <Ticket rotate={170.18} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
 
-                <div className="absolute z-[-10000] sm:left-[40%] sm:top-[40%] right-[25px] bottom-[150px]">
+                <div className="absolute z-[-10000] left-[40%] top-[40%] sm:block hidden">
                   <Ticket rotate={343} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
+                <div className="absolute z-[-10000] left-[72%] top-[40%] sm:block hidden">
+                  <Ticket rotate={27} size={{width: "41.81px", height: "37.07px"}}/>
+                </div>
 
-                {/* <div className="absolute z-[-100] left-[16%] bottom-0">
+                <div className="absolute z-[-100] left-[16%] bottom-0 sm:block hidden">
                   <Ticket rotate={20.55} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
-                <div className="absolute z-[-1] left-[35%] bottom-0">
+                <div className="absolute z-[-1] left-[35%] bottom-0 sm:block hidden">
                   <Ticket rotate={216} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
-                <div className="absolute z-[-100] left-[55%] bottom-0">
+                <div className="absolute z-[-100] left-[55%] bottom-0 sm:block hidden">
                   <Ticket rotate={250.62} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
-                <div className="absolute z-[-100] left-[80%] bottom-0">
+                <div className="absolute z-[-100] left-[80%] bottom-0 sm:block hidden">
                   <Ticket rotate={8.22} size={{width: "51.14px", height: "45.26px"}}/>
-                </div> */}
+                </div>
+              {/* ------------------------------------------------------------------ */}
+                <div className="absolute z-[-100] left-[0] top-[10px] sm:hidden block">
+                  <Ticket rotate={-35} size={{width: "51.14px", height: "45.26px"}}/>
+                </div>
+                <div className="absolute z-[-100] right-[20px] top-0 sm:hidden block">
+                  <Ticket rotate={20.92} size={{width: "41.81px", height: "37.07px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] right-[60px] top-[70px] sm:hidden block">
+                  <Ticket rotate={20.92} size={{width: "51.14px", height: "45.26px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] left-[50px] top-[120px] sm:hidden block">
+                  <Ticket rotate={20.92} size={{width: "41.81px", height: "37.07px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] left-[15px] bottom-[150px] sm:hidden block">
+                  <Ticket rotate={20.92} size={{width: "51.14px", height: "45.26px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] right-[15px] bottom-[150px] sm:hidden block">
+                  <Ticket rotate={-20.92} size={{width: "51.14px", height: "45.26px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] left-[120px] bottom-[100px] sm:hidden block">
+                  <Ticket rotate={80.92} size={{width: "41.81px", height: "37.07px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] left-[10px] bottom-[10px] sm:hidden block">
+                  <Ticket rotate={20.92} size={{width: "41.81px", height: "37.07px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] right-[10px] bottom-[10px] sm:hidden block">
+                  <Ticket rotate={-20.92} size={{width: "41.81px", height: "37.07px"}}/>
+                </div>
+                
                 <div className="flex flex-row flex-wrap justify-around items-center gap-[40px] sm:gap-[50px] lg:gap-[40px] lx:gap-[60px]">
                   {onChainData.map((item) => {
                     return <OnChainData name={item.name} value={item.value} />;
