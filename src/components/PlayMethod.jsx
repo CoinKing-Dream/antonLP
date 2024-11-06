@@ -23,7 +23,7 @@ function useWindowSize() {
     return () => window.removeEventListener('resize', handleResize);
   }, []); // Empty dependency array means this effect runs once on mount and unmount
 
-  if(windowSize.width<1281) return true;
+  if(windowSize.width<640) return true;
   return false;
 }
 
@@ -32,7 +32,7 @@ const PlayMethod = ({order, title, content}) => {
     
     const ticketComponents = Array.from({length: order}, (_, index) => 
         <div key={index} className="z-[10] absolute w-[65px] h-[65px] md:w-[80px] md:h-[80px] xl:w-[120px] xl:h-[120px] left-0 top-0" style={{transform: `translate(15%, 15%) rotate(${180-((index==1)?90:(360/order))*index}deg)`}}>
-          <Ticket rotate={347} size={{width: "55px", height: "47px"}}/>
+          {isTiny?<Ticket rotate={347} size={{width: "35px", height: "40px"}}/>:<Ticket rotate={347} size={{width: "55px", height: "47px"}}/>}
         </div>
       );
 

@@ -177,52 +177,88 @@ function App() {
               </button>
             </div>
             <div
-              className="max-w-[1850px] w-[200px] sm:w-[600px] lg:w-[90%] my-[20px] sm:my-[60px] md:my-[100px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]"
+              className="max-w-[1850px] w-[300px] sm:w-[600px] lg:w-[90%] my-[20px] sm:my-[60px] md:my-[100px] rounded-[20px] bg-gradient-to-r from-[#5B595980] to-[#2B2B2B80] p-[10px]"
               data-aos="fade-up"
               data-aos-delay="100"
               data-aos-duration="1000"
               data-aos-easing="easing-in-out"
             >
-              <div className="w-full border-2 border-solid border-gray-500 rounded-[10px] sm:rounded-[20px] uppercase leading-normal tracking-widest text-[13px] sm:text-[15px] lg:text-[15px] xl:text-[20px] 2xl:text-[25px] px-[10px] pt-[50px] pb-[10px] relative">
-                <div className="absolute z-[-100] left-[20px] top-0">
+              <div className="w-full h-full z-[-1] border-2 border-solid border-gray-500 rounded-[10px] sm:rounded-[20px] uppercase leading-normal tracking-widest text-[13px] sm:text-[15px] lg:text-[15px] xl:text-[20px] 2xl:text-[25px] px-[10px] pt-[50px] pb-[10px] relative">
+                <div className="absolute z-[-100] left-[20px] top-0 sm:block hidden">
                   <Ticket rotate={327} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
-                <div className="absolute z-[-100] left-[20%] top-0">
+                <div className="absolute z-[-100] left-[20%] top-0 sm:block hidden">
                   <Ticket rotate={193} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
-                <div className="absolute z-[-100] left-[40%] top-0">
+                <div className="absolute z-[-100] left-[50%] top-0 sm:block hidden">
                   <Ticket rotate={20.92} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
-                <div className="absolute z-[-100] left-[60%] top-0">
+                <div className="absolute z-[-100] left-[65%] top-0 sm:block hidden">
                   <Ticket rotate={347} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
-                <div className="absolute z-[-100] left-[80%] top-0">
+                <div className="absolute z-[-100] left-[80%] top-0 sm:block hidden">
                   <Ticket rotate={354} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
-                <div className="absolute z-[-100] right-[10px] top-0">
+                <div className="absolute z-[-1000] right-[10px] top-0 sm:block hidden">
                   <Ticket rotate={170.18} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
 
-                <div className="absolute z-[-100] left-[35%] top-[45%]">
+                <div className="absolute z-[-10000] left-[40%] top-[40%] sm:block hidden">
                   <Ticket rotate={343} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
-                <div className="absolute z-[-100] left-[70%] top-[45%]">
-                  <Ticket rotate={26.97} size={{width: "41.81px", height: "37.07px"}}/>
+                <div className="absolute z-[-10000] left-[72%] top-[40%] sm:block hidden">
+                  <Ticket rotate={27} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
 
-                <div className="absolute z-[-100] left-[16%] bottom-0">
+                <div className="absolute z-[-100] left-[16%] bottom-0 sm:block hidden">
                   <Ticket rotate={20.55} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
-                <div className="absolute z-[-1] left-[35%] bottom-0">
+                <div className="absolute z-[-1] left-[35%] bottom-0 sm:block hidden">
                   <Ticket rotate={216} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
-                <div className="absolute z-[-100] left-[55%] bottom-0">
+                <div className="absolute z-[-100] left-[55%] bottom-0 sm:block hidden">
                   <Ticket rotate={250.62} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
-                <div className="absolute z-[-100] left-[80%] bottom-0">
+                <div className="absolute z-[-100] left-[80%] bottom-0 sm:block hidden">
                   <Ticket rotate={8.22} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
-                <div className="flex flex-row flex-wrap justify-around items-center gap-[20px] sm:gap-[50px] lg:gap-[40px] lx:gap-[60px]">
+              {/* ------------------------------------------------------------------ */}
+                <div className="absolute z-[-100] left-[0] top-[10px] sm:hidden block">
+                  <Ticket rotate={-35} size={{width: "51.14px", height: "45.26px"}}/>
+                </div>
+                <div className="absolute z-[-100] right-[20px] top-0 sm:hidden block">
+                  <Ticket rotate={20.92} size={{width: "41.81px", height: "37.07px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] right-[60px] top-[70px] sm:hidden block">
+                  <Ticket rotate={20.92} size={{width: "51.14px", height: "45.26px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] left-[50px] top-[120px] sm:hidden block">
+                  <Ticket rotate={20.92} size={{width: "41.81px", height: "37.07px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] left-[15px] bottom-[150px] sm:hidden block">
+                  <Ticket rotate={20.92} size={{width: "51.14px", height: "45.26px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] right-[15px] bottom-[150px] sm:hidden block">
+                  <Ticket rotate={-20.92} size={{width: "51.14px", height: "45.26px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] left-[120px] bottom-[100px] sm:hidden block">
+                  <Ticket rotate={80.92} size={{width: "41.81px", height: "37.07px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] left-[10px] bottom-[10px] sm:hidden block">
+                  <Ticket rotate={20.92} size={{width: "41.81px", height: "37.07px"}}/>
+                </div>
+
+                <div className="absolute z-[-100] right-[10px] bottom-[10px] sm:hidden block">
+                  <Ticket rotate={-20.92} size={{width: "41.81px", height: "37.07px"}}/>
+                </div>
+                
+                <div className="flex flex-row flex-wrap justify-around items-center gap-[40px] sm:gap-[50px] lg:gap-[40px] lx:gap-[60px]">
                   {onChainData.map((item) => {
                     return <OnChainData name={item.name} value={item.value} />;
                   })}
@@ -259,7 +295,7 @@ function App() {
           </div>
         </div>
 
-        <div className="radial-gradient-2 mt-[50px] sm:mt-[60px] md:mt-[100px] z-[1000] flex md:flex-row md:justify-around flex-col gap-1 w-full max-w-[1500px]">
+        <div className="radial-gradient-2 mt-[50px] sm:mt-[60px] md:mt-[100px] z-[1000] flex md:flex-row md:justify-around flex-col gap-[50px] md:gap-1 w-full max-w-[1500px]">
           <div
             className="flex flex-col items-center gap-[20px] sm:gap-[50px]"
             data-aos="fade-up"
@@ -267,7 +303,7 @@ function App() {
             data-aos-duration="1000"
             data-aos-easing="easing-in-out"
           >
-            <p className="text-[20px] sm:text-[30px] md:text-[35px]">DEMO</p>
+            <p className="text-[20px] sm:text-[30px] md:text-[35px]">Demo</p>
             <Demo />
           </div>
           <div
@@ -277,20 +313,20 @@ function App() {
             data-aos-duration="1000"
             data-aos-easing="easing-in-out"
           >
-            <p className="text-[20px] sm:text-[30px] md:text-[35px]">ROADMAP</p>
+            <p className="text-[20px] sm:text-[30px] md:text-[35px]">RoadMap</p>
             <Roadmap />
           </div>
         </div>
 
         <div
-          className="relative flex flex-col py-[150px] sm:py-[100px] md:py-[150px] lg:py-[200px] gap-5 w-[90%] items-center overflow-hidden"
+          className="relative flex flex-col py-[20px] sm:py-[100px] lg:py-[150px] gap-5 w-[90%] items-center overflow-hidden"
           data-aos="fade-up"
           data-aos-delay="100"
           data-aos-duration="1000"
           data-aos-easing="easing-in-out"
         >
-          <div className="absolute z-[-1] radial-gradient-3 w-[50vw] h-[1000px] top-[200px] rotate-[-20deg] sm:rotate-[-35deg] sm:w-[500px] sm:h-[1000px] sm:top-[120px] sm:left-[5vw] md:w-[500px] md:h-[1400px] md:left-[10vw] lg:w-[700px] md:top-[50px] lg:h-[1400px] lg:left-[10vw] lg:top-[50px]"></div>
-          <div className="flex flex-row gap-2 my-[50px]">
+          <div className="absolute z-[-1] radial-gradient-3 w-[50vw] h-[900px] top-[50px] rotate-[-20deg] sm:rotate-[-35deg] sm:w-[500px] sm:h-[1000px] sm:top-[120px] sm:left-[5vw] md:w-[500px] md:h-[1400px] md:left-[10vw] lg:w-[700px] md:top-[50px] lg:h-[1400px] lg:left-[10vw] lg:top-[50px]"></div>
+          <div className="flex flex-row gap-2 mt-[50px] mb-[5px] sm:my-[50px]">
             <span className="text-[20px] sm:text-[30px] md:text-[35px]">
               Partners
             </span>
