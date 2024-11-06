@@ -32,7 +32,7 @@ const PlayMethod = ({order, title, content}) => {
     
     const ticketComponents = Array.from({length: order}, (_, index) => 
         <div key={index} className="z-[10] absolute w-[65px] h-[65px] md:w-[80px] md:h-[80px] xl:w-[120px] xl:h-[120px] left-0 top-0" style={{transform: `translate(15%, 15%) rotate(${180-((index==1)?90:(360/order))*index}deg)`}}>
-          <Ticket rotate={347} isSmall={false} isTiny={isTiny}/>
+          <Ticket rotate={347} size={{width: "55px", height: "47px"}}/>
         </div>
       );
 

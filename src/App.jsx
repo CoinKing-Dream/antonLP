@@ -166,13 +166,13 @@ function App() {
               data-aos-duration="1000"
               data-aos-easing="easing-in-out"
             >
-              <div className="absolute z-10 right-[-5px] top-[-20px]">
-                <Ticket rotate={0} isSmall={true} />
+              <div className="absolute z-10 right-[-2px] top-[-22px] sm:right-[-10px] sm:top-[-20px] md:right-[-10px] md:top-[-18px] lg:right-[-5px] lg:top-[-20px] xl:right-[-10px] xl:top-[-20px]">
+                <Ticket rotate={20.92} size={{width: "48.48px", height: "43.09px"}} />
               </div>
-              <div className="absolute z-10 left-[-5px] top-[20px] sm:top-[50px] md:top-[55px] lg:top-[85px]">
-                <Ticket rotate={45} isSmall={true} />
+              <div className="absolute z-10 left-[-5px] top-[20px] sm:left-[-10px] sm:top-[45px] md:left-[-10px] md:top-[45px] lg:left-[-10px] lg:top-[70px] xl:left-[-10px] xl:top-[80px]">
+                <Ticket rotate={-31.95} size={{width: "48.48px", height: "43.09px"}} />
               </div>
-              <button className="cursor-pointer absolute z-20 gradient-button rounded-[5px] sm:rounded-[15px] px-[40px] sm:px-[45px] md:px-[65px] lg:px-[85px] xl:px-[60px] py-[10px] sm:py-[25px] md:py-[20px] lg:py-[30px] ring-2 ring-offset-4 ring-offset-black ring-[#720000] text-[15px] md:text-[20px] lg:text-[25px] xl:text-[30px]">
+              <button className="cursor-pointer absolute z-20 gradient-button rounded-[5px] sm:rounded-[15px] px-[40px] sm:px-[45px] md:px-[65px] lg:px-[85px] xl:px-[60px] py-[10px] sm:py-[25px] md:py-[20px] lg:py-[30px] outline outline-offset-2 outline-2 outline-[#720000] text-[15px] md:text-[20px] lg:text-[25px] xl:text-[30px]">
                 Get Tickets Win Prizes
               </button>
             </div>
@@ -185,42 +185,42 @@ function App() {
             >
               <div className="w-full border-2 border-solid border-gray-500 rounded-[10px] sm:rounded-[20px] uppercase leading-normal tracking-widest text-[13px] sm:text-[15px] lg:text-[15px] xl:text-[20px] 2xl:text-[25px] px-[10px] pt-[50px] pb-[10px] relative">
                 <div className="absolute z-[-100] left-[20px] top-0">
-                  <Ticket rotate={327} isSmall={false} />
+                  <Ticket rotate={327} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
                 <div className="absolute z-[-100] left-[20%] top-0">
-                  <Ticket rotate={193} isSmall={true} />
+                  <Ticket rotate={193} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
                 <div className="absolute z-[-100] left-[40%] top-0">
-                  <Ticket rotate={20.92} isSmall={true} />
+                  <Ticket rotate={20.92} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
                 <div className="absolute z-[-100] left-[60%] top-0">
-                  <Ticket rotate={347} isSmall={true} />
+                  <Ticket rotate={347} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
                 <div className="absolute z-[-100] left-[80%] top-0">
-                  <Ticket rotate={354} isSmall={false} />
+                  <Ticket rotate={354} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
                 <div className="absolute z-[-100] right-[10px] top-0">
-                  <Ticket rotate={170.18} isSmall={true} />
+                  <Ticket rotate={170.18} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
 
                 <div className="absolute z-[-100] left-[35%] top-[45%]">
-                  <Ticket rotate={343} isSmall={false} />
+                  <Ticket rotate={343} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
                 <div className="absolute z-[-100] left-[70%] top-[45%]">
-                  <Ticket rotate={26.97} isSmall={true} />
+                  <Ticket rotate={26.97} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
 
                 <div className="absolute z-[-100] left-[16%] bottom-0">
-                  <Ticket rotate={20.55} isSmall={false} />
+                  <Ticket rotate={20.55} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
                 <div className="absolute z-[-1] left-[35%] bottom-0">
-                  <Ticket rotate={216} isSmall={true} />
+                  <Ticket rotate={216} size={{width: "41.81px", height: "37.07px"}}/>
                 </div>
                 <div className="absolute z-[-100] left-[55%] bottom-0">
-                  <Ticket rotate={250.62} isSmall={false} />
+                  <Ticket rotate={250.62} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
                 <div className="absolute z-[-100] left-[80%] bottom-0">
-                  <Ticket rotate={8.22} isSmall={false} />
+                  <Ticket rotate={8.22} size={{width: "51.14px", height: "45.26px"}}/>
                 </div>
                 <div className="flex flex-row flex-wrap justify-around items-center gap-[20px] sm:gap-[50px] lg:gap-[40px] lx:gap-[60px]">
                   {onChainData.map((item) => {
