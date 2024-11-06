@@ -2,9 +2,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import logo from "./assets/logo.png";
-import email from "./assets/email.png";
-import twitter from "./assets/twitter.png";
-import telegram from "./assets/telegram.png";
+import email from "./assets/email.svg";
+import twitter from "./assets/twitter.svg";
+import telegram from "./assets/telegram.svg";
 import partnerImg from "./assets/partner.png";
 
 import OnChainData from "./components/OnchainData";

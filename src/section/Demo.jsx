@@ -1,11 +1,11 @@
 import downmenu_mark from "../assets/downmenu_mark.png";
 import ticket from "../assets/ticket.gif";
-import ticket_1 from "../assets/ticket-1.png";
-import ticket_2 from "../assets/ticket-2.png";
+import ticket_1 from "../assets/ticket-1.svg";
+import ticket_2 from "../assets/ticket-2.svg";
 import ticket_3 from "../assets/logo.png";
-import menu_2 from "../assets/menu-2.png";
-import menu_3 from "../assets/menu-3.png";
-import menu_4 from "../assets/menu-4.png";
+import menu_2 from "../assets/menu-2.svg";
+import menu_3 from "../assets/menu-3.svg";
+import menu_4 from "../assets/menu-4.svg";
 
 const Demo = () => {
     return (
