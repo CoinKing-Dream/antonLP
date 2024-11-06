@@ -1,8 +1,9 @@
-import developmentIcon from "../assets/1_development.png";
-import tgMiniappIcon from "../assets/2_tgminiapp.png";
-import partnershipIcon from "../assets/3_partnership.png";
-import memecoinIcon from "../assets/4_memecoin.png";
-import chainsIcon from "../assets/5_chains.png";
+import developmentIcon from "../assets/1_development.svg";
+import tgMiniappIcon from "../assets/2_tgminiapp.svg";
+import partnershipIcon from "../assets/3_partnership.svg";
+import memecoinIcon from "../assets/4_memecoin.svg";
+import chainsIcon from "../assets/5_chains.svg";
+import campImg from "../assets/camp.svg";
 
 import { useState, useEffect } from 'react';
 
@@ -66,7 +67,6 @@ const roadMap = [{
     now: 2
 }]
 
-import campImg from "../assets/camp.png";
 
 const Roadmap = () => {
     const {leftMoveValue, topMoveValue} = useWindowSize();
