@@ -37,7 +37,6 @@
 }
 .radial-gradient-3 {
   background-image: radial-gradient(closest-side, #000000 44%, #1A1A1A 57%, #000004 76%);
-  transform: rotate(-45deg);
 }
 .radial-gradient-4 {
   background-image: radial-gradient(closest-side, #000000 44%, #1A1A1A 57%, #000004 76%);
