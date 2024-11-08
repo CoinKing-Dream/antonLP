@@ -148,8 +148,8 @@ function App() {
             data-aos-easing="easing-in-out"
           >
             <div className="flex justify-center">
-              <div className="max-w-[1500px] w-[90%] rounded-[20px] my-[10px] sm:my-[20px] md:my-[30px] lg:my-[80px] mx-[20px] text-center bg-[#D9D9D920] p-[10px]">
-                <div className="w-full border-2 border-solid border-gray-500 rounded-[10px] sm:rounded-[20px] uppercase leading-normal tracking-widest text-[10px] sm:text-[15px] md:text-[15px] lg:text-[20px] xl:text-[25px] px-[30px]">
+              <div className="max-w-[2000px] min-w-[300px] w-[90%] rounded-[20px] my-[10px] sm:my-[20px] md:my-[30px] lg:my-[80px] mx-[10%] text-center bg-[#D9D9D920] p-[10px]">
+                <div className="w-full border-2 border-solid border-gray-500 rounded-[10px] sm:rounded-[20px] uppercase leading-normal tracking-widest text-[10px] sm:text-[15px] lg:text-[20px] xl:text-[25px] 2xl:text-[30px] py-3 px-[30px]">
                   TonTickets is a telegram mini-app in where people can win many
                   different prizes ranging from popular memecoins to the rarest
                   and most expensive NFT on TON chain
@@ -160,19 +160,19 @@ function App() {
 
           <div className="flex flex-col items-center justify-center w-full gap-[100px] my-[30px] sm:my-[50px] md:my-[80px]">
             <div
-              className="relative w-[300px] md:w-[400px] lg:w-[520px] text-center flex flex-col items-center mb-[2px] lg:mb-[50px]"
+              className="relative max-w-[800px] w-[35%] min-w-[300px] text-center flex flex-col items-center mb-[2px] lg:mb-[50px]"
               data-aos="fade-up"
               data-aos-delay="100"
               data-aos-duration="1000"
               data-aos-easing="easing-in-out"
             >
-              <div className="absolute z-10 right-[-2px] top-[-22px] sm:right-[-10px] sm:top-[-20px] md:right-[-10px] md:top-[-18px] lg:right-[-5px] lg:top-[-20px] xl:right-[-10px] xl:top-[-20px]">
+              <div className="absolute z-10 right-[-20px] top-[-20px] sm:right-[-15px] sm:top-[-20px] md:right-[-20px] md:top-[-20px] lg:right-[-15px] lg:top-[-20px] xl:right-[-10px] xl:top-[-20px]">
                 <Ticket rotate={20.92} size={{width: "48.48px", height: "43.09px"}} />
               </div>
-              <div className="absolute z-10 left-[-5px] top-[20px] sm:left-[-10px] sm:top-[45px] md:left-[-10px] md:top-[45px] lg:left-[-10px] lg:top-[70px] xl:left-[-10px] xl:top-[80px]">
+              <div className="absolute z-10 left-[-15px] top-[25px] sm:left-[-20px] sm:top-[40px] md:left-[-10px] md:top-[45px] lg:left-[-10px] lg:top-[60px] xl:left-[-10px] xl:top-[80px]">
                 <Ticket rotate={-31.95} size={{width: "48.48px", height: "43.09px"}} />
               </div>
-              <button className="cursor-pointer absolute z-20 gradient-button rounded-[5px] sm:rounded-[15px] px-[40px] sm:px-[45px] md:px-[65px] lg:px-[85px] xl:px-[60px] py-[10px] sm:py-[25px] md:py-[20px] lg:py-[30px] outline outline-offset-2 outline-2 outline-[#720000] text-[15px] md:text-[20px] lg:text-[25px] xl:text-[30px]">
+              <button className="w-full cursor-pointer absolute z-20 gradient-button rounded-[10px] lg:rounded-[15px] md:px-px-[40px] lg:px-[50px] py-[15px] sm:py-[20px] md:py-[20px] lg:py-[30px] outline outline-offset-2 outline-2 outline-[#720000] text-[15px] md:text-[18px] xl:text-[25px] 2xl:text-[30px]">
                 Get Tickets Win Prizes
               </button>
             </div>
@@ -370,10 +370,10 @@ function App() {
                 data-aos-duration="1000"
                 data-aos-easing="easing-in-out"
               >
-                <div className="flex flex-row gap-2">
+                <div className="flex flex-row gap-2 justify-center items-center">
                   <img
                     src={telegram}
-                    className="w-[20px] sm:w-[30px] md:w-[50px]"
+                    className="w-[30px] md:w-[50px]"
                   />
                   <div>Partnership</div>
                 </div>
@@ -385,10 +385,10 @@ function App() {
                 data-aos-duration="1000"
                 data-aos-easing="easing-in-out"
               >
-                <div className="flex flex-row gap-2">
+                <div className="flex flex-row gap-2 justify-center items-center">
                   <img
                     src={telegram}
-                    className="w-[20px] sm:w-[30px] md:w-[50px]"
+                    className="w-[30px] md:w-[50px]"
                   />
                   <div>Support</div>
                 </div>
@@ -404,17 +404,17 @@ function App() {
               <a href={"http://#"}>
                 <img
                   src={twitter}
-                  className="w-[20px] sm:w-[30px] md:w-[50px]"
+                  className="w-[30px] md:w-[50px]"
                 />
               </a>
               <a href={"http://#"}>
                 <img
                   src={telegram}
-                  className="w-[20px] sm:w-[30px] md:w-[50px]"
+                  className="w-[30px] md:w-[50px]"
                 />
               </a>
               <a href={"http://#"}>
-                <img src={email} className="w-[20px] sm:w-[30px] md:w-[50px]" />
+                <img src={email} className="w-[30px] md:w-[50px]" />
               </a>
             </div>
           </div>

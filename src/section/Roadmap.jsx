@@ -23,10 +23,10 @@ function useWindowSize() {
 
     window.addEventListener('resize', handleResize);
 
-    handleResize(); // Call it initially
+    handleResize(); 
 
     return () => window.removeEventListener('resize', handleResize);
-  }, []); // Empty dependency array means this effect runs once on mount and unmount
+  }, []); 
 
   if (windowSize.width >= 1280) return {leftMoveValue:110, topMoveValue:200, campLeft:20};
   else if (windowSize.width >= 1024) return {leftMoveValue:80, topMoveValue:175, campLeft:16};
@@ -84,7 +84,7 @@ const Roadmap = () => {
                             <div className={`relative flex flex-col gap-3 sm:gap-5 justify-center items-center sm:w-[340px] md:w-[80%] w-[80%] lg:w-[280px] xl:w-[300px] h-[190px] sm:h-[133px] md:h-[134px] lg:h-[150px] xl:h-[171px] overflow-hidden bg-[#4040404D] p-[10px] rounded-[20px]`}>
                                 <div className={`${index==4&&"blur-md select-none"} lg:text-[${item.now<=index?20:15}px] md:text-[${item.now<=index?20:15}px] sm:text-[${item.now<=index?20:15}px] text-[${item.now<=index?18:15}px] text-center max-w-[70%]`}>{item.title}</div>
                                 <div className={`${index==4&&"blur-sm select-none"} text-[12px] md:text-[10px] lg:text-[12px] text-center`}>{item.content}</div>
-                                <img className={`absolute right-[5px] ${index>=3?"md:top-[30px] sm:top-[10px] top-[50px]":"sm:top-[5px] top-[25px]"} sm:right-[5px] w-[10vw] max-w-[45px] sm:w-[40px]`} src={item.icon}/>
+                                <img className={`absolute right-[2px] ${index>=3?"md:top-[30px] sm:top-[10px] top-[30px]":"sm:top-[5px] top-[15px]"} sm:right-[5px] w-[10vw] min-w-[40px] max-w-[45px] sm:w-[40px]`} src={item.icon}/>
                             </div>
                         </div>
                         <div className={`flex flex-col justify-center items-center absolute z-[-100] mix-blend-color-burn`} 
